@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bubble.css">
         <title>Bot Teste</title>
     </head>
     <body style="background-color:#669999;">
@@ -12,12 +13,54 @@
     </script>
     <script>
         (function () {
+            const chatContainer = "blip-chat-container";
+            const bubbleMessage = "Olá, posso ajudar?";
+
+            function createBubble(){
+
+                bubbleContainer = document.createElement("div");
+                bubbleContainer.id = "bubble-container";
+
+                bubble = document.createElement("div");
+                bubble.id = "message-bubble";
+                bubble.onclick = function(){ client.widget._openChat() }
+
+                var triangle = document.createElement("div");
+                triangle.id = "triangle";
+
+                var message = document.createElement("div");
+                message.id = "message";
+                message.innerHTML = bubbleMessage;
+
+                bubble.appendChild(message);
+                bubble.appendChild(triangle);
+                bubbleContainer.appendChild(bubble);
+
+                document
+                .querySelector(`#${chatContainer}`)
+                .prepend(bubbleContainer);
+
+            }
+
+            function displayBubble(){
+                bubble.classList.add(displayClassName);
+                bubble.classList.remove(hideClassName);
+            }
+
             window.onload = function () {
-                new BlipChat()
+                var client = new BlipChat();
+                client
                 .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
                 .withButton({"color":"#f285e8","icon":"https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/310a1a3a-99b5-45e8-b8e0-f355543f0ff6"})
                 .withCustomCommonUrl('https://chat.blip.ai/')
+                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
+                    client.sendMessage(startMessage);
+                })
                 .build();
+
+                createBubble();
+                displayBubble();
+
             }
         })();
     </script>

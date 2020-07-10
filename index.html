@@ -71,10 +71,6 @@
                 bubble.classList.remove(displayClassName);
             }
 
-            function inputFocus(el){
-                var input_area = document.getElementById(el);
-                input_area.focus()
-            }
 
             changeBubble = function () {
                 if (bubble.classList.contains(displayClassName))
@@ -130,7 +126,7 @@
                 replaceImageStructure();
                 createBubble();
                 displayBubble();
-                inputFocus("msg-textarea");
+                
                 setTimeout(function(){
                     hideBubble();
                 }, 10000);
@@ -140,7 +136,12 @@
             }
         })();
 
-            
+            function inputFocus(){
+                var input_area = document.getElementById("msg-textarea");
+                input_area.focus()
+            }
+            elemento = document.getElementById('blip-chat-open-iframe')
+            elemento.addEventListener('click', inputFocus, false);
 
     </script>
                                     

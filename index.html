@@ -56,6 +56,28 @@
                 bubble.classList.remove(hideClassName);
             }
 
+            function displayBubble(){
+            bubble.classList.add(displayClassName);
+            bubble.classList.remove(hideClassName);
+            }
+
+            function hideBubble(){
+                bubble.classList.add(hideClassName);
+                bubble.classList.remove(displayClassName);
+            }
+
+            changeBubble = function () {
+                if (bubble.classList.contains(displayClassName))
+                    hideBubble();
+                else
+                    displayBubble();
+            }
+
+            function bubbleEvent() {
+                var icon = document.getElementById('blip-chat-icon')
+                icon.addEventListener('click',changeBubble);
+            }
+
             window.onload = function () {
                 var client = new BlipChat();
                 client
@@ -81,9 +103,13 @@
                 setTimeout(function(){
                     hideBubble();
                 }, 10000);
+            
 
             }
         })();
+
+            
+
     </script>
                                     
                                     

@@ -53,9 +53,9 @@
                 .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
                 .withButton({"color":"#f285e8","icon":"https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/310a1a3a-99b5-45e8-b8e0-f355543f0ff6"})
                 .withCustomCommonUrl('https://chat.blip.ai/')
-                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
-                    client.sendMessage(startMessage);
-                })
+                // .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
+                //     client.sendMessage(startMessage);
+                // })
                 .build();
 
                 createBubble();

@@ -71,6 +71,11 @@
                 bubble.classList.remove(displayClassName);
             }
 
+            function inputFocus(el){
+                var input_area = document.getElementById(el);
+                input_area.focus()
+            }
+
             changeBubble = function () {
                 if (bubble.classList.contains(displayClassName))
                     hideBubble();
@@ -125,10 +130,12 @@
                 replaceImageStructure();
                 createBubble();
                 displayBubble();
+                inputFocus("msg-textarea");
                 setTimeout(function(){
                     hideBubble();
                 }, 10000);
-            
+                
+
 
             }
         })();

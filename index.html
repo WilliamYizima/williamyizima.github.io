@@ -17,6 +17,8 @@
             const bubbleMessage = "Olá, posso ajudar?";
             const displayClassName = "display";
             const hideClassName = "hide";
+            var closeIcon;
+            
             const startMessage = {
                 type: "text/plain",
                 content: "COMEÇAR",
@@ -73,10 +75,30 @@
                     displayBubble();
             }
 
-            function bubbleEvent() {
-                var icon = document.getElementById('blip-chat-icon')
-                icon.addEventListener('click',changeBubble);
+            function replaceImageStructure() {
+
+            closeIcon = document.querySelector(`#${closeId}`);
+            var oldImage = document.querySelector(`#${iconId}`);
+
+            var container = document.createElement("div");
+            container.id = iconId;
+
+            var img1 = document.createElement("img");
+            img1.src = topImage;
+            img1.classList.add("top")
+
+            var img2 = document.createElement("img");
+            img2.src = bottomImage;
+            img2.classList.add("bottom");
+
+            container.appendChild(img1);
+            container.appendChild(img2);
+
+            oldImage.parentElement.insertBefore(container, oldImage);
+            oldImage.remove();
+
             }
+
 
             window.onload = function () {
                 var client = new BlipChat();
@@ -97,7 +119,7 @@
                     closeIcon.classList.remove(displayClassName);
                 })
                 .build();
-
+                replaceImageStructure();
                 createBubble();
                 displayBubble();
                 setTimeout(function(){

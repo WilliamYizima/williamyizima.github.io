@@ -17,6 +17,13 @@
             const bubbleMessage = "Olá, posso ajudar?";
             const displayClassName = "display";
             const hideClassName = "hide";
+            const startMessage = {
+                type: "text/plain",
+                content: "COMEÇAR",
+                metadata: {
+                    "#blip.hiddenMessage": true
+                }
+            }
 
             function createBubble(){
 
@@ -55,13 +62,25 @@
                 .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
                 .withButton({"color":"#f285e8","icon":"https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/310a1a3a-99b5-45e8-b8e0-f355543f0ff6"})
                 .withCustomCommonUrl('https://chat.blip.ai/')
-                // .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
-                //     client.sendMessage(startMessage);
-                // })
+                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
+                    client.sendMessage(startMessage);
+                })
+                .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                    closeIcon.classList.add(displayClassName);
+                    closeIcon.classList.remove(hideClassName);
+                    hideBubble();
+                })
+                .withEventHandler(BlipChat.LEAVE_EVENT, function () {
+                    closeIcon.classList.add(hideClassName);
+                    closeIcon.classList.remove(displayClassName);
+                })
                 .build();
 
                 createBubble();
                 displayBubble();
+                setTimeout(function(){
+                    hideBubble();
+                }, 10000);
 
             }
         })();

@@ -107,6 +107,7 @@
             
 
             window.onload = function () {
+                localStorage.removeItem('blipSdkUAccount');
                 var client = new BlipChat();
                 client
                 .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')

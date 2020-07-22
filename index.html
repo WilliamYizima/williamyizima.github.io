@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
+    <link onload="document.getElementById('hideAll').remove()" href="start-screen.css" rel="stylesheet" />
+    <style>
+        #hideAll {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            background-color: white;
+            z-index: 101;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bubble.css">
@@ -11,6 +25,96 @@
 <body style="background-color:#669999;">
     <h1>Bot de Teste</h1>
     <a href="nike.html"> pular para outra página</a>
+    <div id="tudo">
+        <div id="container">
+            <div id="hideAll"></div>
+            <div id="start-screen">
+              <div class="top-section">
+                <div class="top-icon">
+                  <img class="image-icon" src="https://nikestartscreen.cs.blip.ai/assets/images/nike_icon_gray.svg" alt="" />
+                </div>
+                <div class="greeting-phrase">ATENDENTE VIRTUAL DA NIKE</div>
+                <div class="close-button">
+                  <img close-start-screen="true"
+                      src="https://nikestartscreen.cs.blip.ai/assets/images/close_button.svg"
+                      alt="" />
+                </div>
+              </div>
+              <div class="start-screen-content">
+                <div class="offer-question">Como posso te ajudar?</div>
+                <div class="question-box">
+                  <div class="subject-phrase">CONSULTAR PEDIDO</div>
+                  <div class="ask-question-section">
+                    <input id="question-input-recall"
+                          class="ask-question-input"
+                          placeholder="Digite o número do seu CPF"
+                          type="text"
+                          name="question"
+                          value="" />
+                    <div id="click-question-recall" class="question-image-box">
+                      <div payload="recall:question-input-recall"
+                          class="question-image search-image"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subjects-box">
+                  <span class="subject-phrase">SOBRE MINHA ENTREGA</span>
+                  <div>
+                    <div class="subject-item">
+                      <span payload="Acompanhar a minha entrega">ACOMPANHAR ENTREGA</span>
+                    </div>
+                    <div class="subject-item">
+                      <span payload="Ver meus pedidos">VER MEUS PEDIDOS</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subjects-box">
+                  <span class="subject-phrase">SOBRE MINHA COMPRA</span>
+                  <div>
+                    <div class="subject-item">
+                      <span payload="Pedir reembolso">PEDIR REEMBOLSO</span>
+                    </div>
+                    <div class="subject-item">
+                      <span payload="Solicitar troca ou devolução">SOLICITAR TROCA OU DEVOLUÇÃO</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subjects-box">
+                  <span class="subject-phrase">DÚVIDAS</span>
+                  <div>
+                    <div class="subject-item">
+                      <span payload="Passo a passo para comprar">PASSO A PASSO PARA COMPRAR</span>
+                    </div>
+                    <div class="subject-item">
+                      <span payload="Duvidas perguntas frequentes">PERGUNTAS FREQUENTES</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="question-box">
+                  <div class="ask-question-phrase">NÃO ENCONTROU O QUE PROCURAVA?</div>
+                  <div class="ask-question-section">
+                    <input id="question-input"
+                          class="ask-question-input"
+                          placeholder="Digite a sua dúvida aqui"
+                          type="text"
+                          name="question"
+                          value="" />
+                    <div id="click-question" class="question-image-box">
+                      <div payload="question:question-input"
+                          class="question-image search-image"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="bottom-section" rel="bookmark">
+                <div class="bottom-content">
+                  <img src="https://nikestartscreen.cs.blip.ai/assets/images/vector.svg" class="scroll-image" /><span class="scroll-phrase">DESLIZE PARA MAIS OPÇÕES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
 </body>
 
 <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">

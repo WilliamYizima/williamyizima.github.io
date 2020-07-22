@@ -26,7 +26,7 @@
   
   var StartScreenWidget = function () {
     let BASE_URL = "https://nikestartscreen.cs.blip.ai";
-    let STYLE_URL = BASE_URL + "/assets/css/style.css";
+    let STYLE_URL = BASE_URL + "style.css";
     let START_SCREEN_URL = BASE_URL + "/static-start-screen.html";
     let APP_KEY =
       "aW5mcmFjb21tZXJjZW5pa2Vwcm9kOjBkODkzOWY0LWEyNzAtNGFmNy1hYTllLWU2YjU0YzhiMmI1NA==";

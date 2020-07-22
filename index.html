@@ -12,27 +12,11 @@
     <h1>Bot de Teste</h1>
     <a href="nike.html"> pular para outra página</a>
 </body>
-<button onclick="ativa_butao()">Esse é meu butao</button>
+
 <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
 </script>
 <script>
-    function ativa_butao() {
 
-        (function () {
-            window.onload = function () {
-                var blipClient = new BlipChat();
-                blipClient.withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                        blipClient.sendMessage({
-                            "type": "text/plain",
-                            "content": "mandei mensagem"
-                        });
-                    })
-                    .build();
-            }
-        })();
-
-    }
     (function () {
         const chatContainer = "blip-chat-container";
         const bubbleMessage = "Olá, posso ajudar?";

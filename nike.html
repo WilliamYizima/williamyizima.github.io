@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bubble.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <span class="pl-2 pr-4 pr-sm-2 pr-lg-4"><a class="chat-header-general" href="javascript:void(0)"><img
+                src="https://images.lojanike.com.br/site/ni/icones/chat.png"> Chat Online</a></span>
+    <iframe src="javascript:void(0)" title="" style="width: 0px; height: 0px; border: 0px; display: none;"></iframe>
+    <script>!function (a) { var e = "https://s.go-mpulse.net/boomerang/", t = "addEventListener"; if ("False" == "True") a.BOOMR_config = a.BOOMR_config || {}, a.BOOMR_config.PageParams = a.BOOMR_config.PageParams || {}, a.BOOMR_config.PageParams.pci = !0, e = "https://s2.go-mpulse.net/boomerang/"; if (window.BOOMR_API_key = "2YQ79-C9JER-B2SAN-D39ZH-84CKW", function () { function n(e) { a.BOOMR_onload = e && e.timeStamp || (new Date).getTime() } if (!a.BOOMR || !a.BOOMR.version && !a.BOOMR.snippetExecuted) { a.BOOMR = a.BOOMR || {}, a.BOOMR.snippetExecuted = !0; var i, o, _, r = document.createElement("iframe"); if (a[t]) a[t]("load", n, !1); else if (a.attachEvent) a.attachEvent("onload", n); r.src = "javascript:void(0)", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "width:0;height:0;border:0;display:none;", _ = document.getElementsByTagName("script")[0], _.parentNode.insertBefore(r, _); try { o = r.contentWindow.document } catch (O) { i = document.domain, r.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);", o = r.contentWindow.document } o.open()._l = function () { var a = this.createElement("script"); if (i) this.domain = i; a.id = "boomr-if-as", a.src = e + "2YQ79-C9JER-B2SAN-D39ZH-84CKW", BOOMR_lstart = (new Date).getTime(), this.body.appendChild(a) }, o.write("<bo" + 'dy onload="document._l();">'), o.close() } }(), "".length > 0) if (a && "performance" in a && a.performance && "function" == typeof a.performance.setResourceTimingBufferSize) a.performance.setResourceTimingBufferSize(); !function () { if (BOOMR = a.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) { var e = "" == "true" ? 1 : 0, t = "", n = "wfpshlqccdzbqxyygpza-f-aa3cb17be-clientnsv4-s.akamaihd.net", i = { "ak.v": "27", "ak.cp": "863731", "ak.ai": parseInt("543974", 10), "ak.ol": "0", "ak.cr": 21, "ak.ipv": 4, "ak.proto": "h2", "ak.rid": "6334ac12", "ak.r": 29800, "ak.a2": e, "ak.m": "x", "ak.n": "essl", "ak.bpcip": "177.95.35.0", "ak.cport": 54755, "ak.gh": "201.0.217.68", "ak.quicv": "", "ak.tlsv": "tls1.3", "ak.0rtt": "", "ak.csrc": "-", "ak.acc": "", "ak.t": "1595421682", "ak.ak": "hOBiQwZUYzCg5VSAfCLimQ==jV5HXQAlsyTXj+msC/gCmIlyvf9jDOAcRmX8bVRNFxDS3lWYa2ZxkkX7w6rVw08rb4A9fFbgE3MrnPhSrq9sr6SedYCxe5C81zKEgk5aI9q8NDxe3R/ZG5k5r8eBdmAVNXiAqRXAZHQQhtTUd9tvwOzLJG6eV5EBFIZlnYgW3rhB1XrJ4jTFGg9HC3Jo2eLZY/P/bo8aWuquzwyXRnfYFfXH9LY2XtnVfg85zOflK/CYYFgTEywwZp9mrttSlijccE6R3oW18mffN/8pPJpcE93AuObzibCsulvGDmXY7TIS7Qdv9VpP29/F36MMOyy5ZXWg0A9+Lh4EaeXDMkJGt210iMI36DMUX1y9cRD4D/Aj+OODelpm6pn6ut/1rrT2Q0lgRSvsD3qsJToEfBmvg/cD6si1wdhKLbSdQso66Ng=", "ak.pv": "16" }; if ("" !== t) i["ak.ruds"] = t; var o = { i: !1, av: function (e) { var t = "http.initiator"; if (e && (!e[t] || "spa_hard" === e[t])) i["ak.feo"] = void 0 !== a.aFeoApplied ? 1 : 0, BOOMR.addVar(i) }, rv: function () { var a = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t"]; BOOMR.removeVar(a) } }; BOOMR.plugins.AK = { akVars: i, akDNSPreFetchDomain: n, init: function () { if (!o.i) { var a = BOOMR.subscribe; a("before_beacon", o.av, null, null), a("onbeacon", o.rv, null, null), o.i = !0 } return this }, is_complete: function () { return !0 } } } }() }(window);</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/blip-chat-widget"></script>
+    <style type="text/css">
+        @media screen and (max-width: 480px),
+        screen and (max-height: 420px) {
+            .chatParent {
+                overflow-y: hidden !important;
+                position: static !important;
+                height: 0px;
+                width: 0px;
+            }
+        }
+
+        #blip-chat-notifications {
+            background-color: #F76556;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 21px;
+            font-size: 12px;
+            width: 21px;
+            height: 21px;
+            position: fixed;
+            text-align: center;
+            bottom: 65px;
+            right: 30px;
+            opacity: 0;
+        }
+
+        #blip-chat-container {
+            position: fixed;
+            bottom: 40px;
+            right: 80px;
+            z-index: 1000000;
+        }
+
+        @media screen and (max-width: 480px),
+        screen and (max-height: 420px) {
+            #blip-chat-container {
+                bottom: 0px;
+                right: 0px;
+                position: absolute;
+                height: 100%;
+            }
+        }
+
+        #blip-chat-container #blip-chat-iframe {
+            position: fixed;
+            bottom: 90px;
+            right: 38px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 500ms, transform 500ms, visibility 500ms, height 0s 500ms;
+            transform: translateY(10%);
+            z-index: 1;
+            height: 0;
+            width: 400px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            background: #faf9f8;
+        }
+
+        @media screen and (max-width: 480px),
+        screen and (max-height: 420px) {
+            #blip-chat-container #blip-chat-iframe {
+                right: 0px;
+                bottom: 0px !important;
+                max-height: 100vh !important;
+                width: 100vw;
+                position: absolute;
+                box-shadow: none;
+            }
+        }
+
+        #blip-chat-container #blip-chat-iframe.blip-chat-iframe-opened {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            transition: opacity 500ms 10ms, transform 500ms 10ms, visibility 500ms 10ms, height 0ms;
+            height: 610px;
+        }
+
+        @media screen and (max-width: 480px),
+        screen and (max-height: 420px) {
+            #blip-chat-container #blip-chat-iframe.blip-chat-iframe-opened {
+                height: 100%;
+            }
+        }
+
+        #blip-chat-container #blip-chat-open-iframe {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            position: fixed;
+            width: 4%;
+            max-width: 60px;
+            min-width: 48px;
+            max-height: 60px;
+            min-height: 48px;
+            right: 35px;
+            bottom: 35px;
+            transition: transform 200ms, opacity 500ms, visibility 500ms;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 2px 32px rgba(0, 0, 0, 0.1);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media screen and (max-width: 480px),
+        screen and (max-height: 420px) {
+            #blip-chat-container #blip-chat-open-iframe.opened {
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+        }
+
+        #blip-chat-container #blip-chat-open-iframe:active {
+            transform: scale(0.9);
+        }
+
+        #blip-chat-container #blip-chat-open-iframe img,
+        #blip-chat-container #blip-chat-open-iframe svg {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        #blip-chat-open-iframe {
+            display: none;
+        }
+
+        #blip-chat-iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="static-script.js" type="text/javascript"></script>
+    <div id="blip-chat-container" style="display: block;">
+        <div id="bubble-container">
+            <div id="message-bubble" class="hide">
+                <div id="message">Oi, como posso te ajudar?</div>
+                <div id="triangle"></div>
+            </div>
+        </div>
+        <div id="blip-chat-open-iframe" style="height: 56.5469px; visibility: visible; opacity: 1;" class="opened">
+            <div id="blip-chat-notifications" style="opacity: 0;">0</div>
+            <div id="blip-chat-icon" style="display: none;"><img
+                    src="https://nikestartscreen.cs.blip.ai/assets/images/nike_icon_white.svg" class="top"><img
+                    src="https://nikestartscreen.cs.blip.ai/assets/images/nike_icon_white.svg" class="bottom"></div>
+            <svg id="blip-chat-close-icon" viewBox="0 0 40 40" style="display: block;" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="display">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Close" fill="#FFFFFF" fill-rule="nonzero">
+                        <g id="close" transform="translate(14.000000, 14.000000)">
+                            <path
+                                d="M7.62601627,5.78918918 L11.8536585,1.54054054 C12.0487805,1.34594595 12.0487805,1.05405406 11.8536585,0.859459461 L11.203252,0.178378378 C11.00813,-0.0162162161 10.7154471,-0.0162162161 10.5203252,0.178378378 L6.26016258,4.42702704 C6.13008127,4.55675677 5.93495933,4.55675677 5.80487802,4.42702704 L1.54471545,0.145945946 C1.34959349,-0.0486486486 1.05691057,-0.0486486486 0.861788617,0.145945946 L0.178861788,0.827027029 C-0.0162601625,1.02162162 -0.0162601625,1.31351352 0.178861788,1.50810811 L4.43902439,5.75675678 C4.56910569,5.88648652 4.56910569,6.08108111 4.43902439,6.21081085 L0.146341463,10.4918919 C-0.0487804876,10.6864865 -0.0487804876,10.9783784 0.146341463,11.172973 L0.829268292,11.8540541 C1.02439024,12.0486486 1.31707317,12.0486486 1.51219512,11.8540541 L5.77235773,7.60540544 C5.90243904,7.4756757 6.09756098,7.4756757 6.22764229,7.60540544 L10.4878049,11.8540541 C10.6829268,12.0486486 10.9756098,12.0486486 11.1707317,11.8540541 L11.8536585,11.172973 C12.0487805,10.9783784 12.0487805,10.6864865 11.8536585,10.4918919 L7.62601627,6.24324324 C7.49593496,6.1135135 7.49593496,5.91891892 7.62601627,5.78918918 Z"
+                                id="path-1"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <style>
+            #blip-chat-open-iframe {
+                background-color: #000000 !important
+            }
+        </style>
+        <div id="blip-chat-iframe-container" class="blip-chat-iframe-opened"><iframe
+                src="https://chat.blip.ai/?appKey=aW5mcmFjb21tZXJjZW5pa2Vwcm9kOjBkODkzOWY0LWEyNzAtNGFmNy1hYTllLWU2YjU0YzhiMmI1NA%3D%3D"
+                id="blip-chat-iframe" frameborder="0" allow="geolocation" allowfullscreen="true"
+                class="blip-chat-iframe-opened"
+                style="opacity: 1 !important; bottom: calc(111.547px); max-height: 790px;"></iframe>
+            <div id="blip-chat-button-over" class="">
+                <div id="chat-over">
+                    <div id="back-menu-icon"><img
+                            src="https://az-infobots.take.net/customercare/StaticFiles/image/back_menu.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="blip-chat-start-screen" class="">
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+                <meta http-equiv="Pragma" content="no-cache">
+                <meta http-equiv="Expires" content="0">
+                <link rel="shortcut icon" type="image/png" href="favicon.ico">
+                <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+                <link onload="document.getElementById('hideAll').remove()"
+                    href="https://nikestartscreen.cs.blip.ai/assets/css/start-screen.css" rel="stylesheet">
+                <style>
+                    #hideAll {
+                        position: fixed;
+                        left: 0px;
+                        right: 0px;
+                        top: 0px;
+                        bottom: 0px;
+                        background-color: white;
+                        z-index: 101;
+                    }
+                </style>
+
+                <div id="start-screen" style="opacity:1 !important" class="">
+                    <div class="top-section">
+                        <div class="top-icon">
+                            <img class="image-icon"
+                                src="https://nikestartscreen.cs.blip.ai/assets/images/nike_icon_gray.svg" alt="">
+                        </div>
+                        <div class="greeting-phrase">ATENDENTE VIRTUAL DA NIKE</div>
+                        <div class="close-button">
+                            <img close-start-screen="true"
+                                src="https://nikestartscreen.cs.blip.ai/assets/images/close_button.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="start-screen-content">
+                        <div class="offer-question">Como posso te ajudar?</div>
+                        <div class="question-box">
+                            <div class="subject-phrase">CONSULTAR PEDIDO</div>
+                            <div class="ask-question-section">
+                                <input id="question-input-recall" class="ask-question-input"
+                                    placeholder="Digite o número do seu CPF" type="text" name="question" value="">
+                                <div id="click-question-recall" class="question-image-box">
+                                    <div payload="recall:question-input-recall" class="question-image search-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subjects-box">
+                            <span class="subject-phrase">SOBRE MINHA ENTREGA</span>
+                            <div>
+                                <div class="subject-item">
+                                    <span payload="Acompanhar a minha entrega">ACOMPANHAR ENTREGA</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span payload="Ver meus pedidos">VER MEUS PEDIDOS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subjects-box">
+                            <span class="subject-phrase">SOBRE MINHA COMPRA</span>
+                            <div>
+                                <div class="subject-item">
+                                    <span payload="Pedir reembolso">PEDIR REEMBOLSO</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span payload="Solicitar troca ou devolução">SOLICITAR TROCA OU DEVOLUÇÃO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subjects-box">
+                            <span class="subject-phrase">DÚVIDAS</span>
+                            <div>
+                                <div class="subject-item">
+                                    <span payload="Passo a passo para comprar">PASSO A PASSO PARA COMPRAR</span>
+                                </div>
+                                <div class="subject-item">
+                                    <span payload="Duvidas perguntas frequentes">PERGUNTAS FREQUENTES</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box">
+                            <div class="ask-question-phrase">NÃO ENCONTROU O QUE PROCURAVA?</div>
+                            <div class="ask-question-section">
+                                <input id="question-input" class="ask-question-input"
+                                    placeholder="Digite a sua dúvida aqui" type="text" name="question" value="">
+                                <div id="click-question" class="question-image-box">
+                                    <div payload="question:question-input" class="question-image search-image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bottom-section" rel="bookmark" class="hide">
+                        <div class="bottom-content">
+                            <img src="https://nikestartscreen.cs.blip.ai/assets/images/vector.svg"
+                                class="scroll-image"><span class="scroll-phrase">DESLIZE PARA MAIS OPÇÕES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame"
+        id="destination_publishing_iframe_nike_0" name="destination_publishing_iframe_nike_0_name"
+        src="https://nike.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.nike.com.br" class="aamIframeLoaded"
+        style="display: none; width: 0px; height: 0px;"></iframe>
+    <iframe id="RTBhouseAllPages" src="//us.creativecdn.com/tags?id=pr_ROD6P17l68yZEAcx1Frx&amp;ncm=1" width="1"
+        height="1" scrolling="no" frameborder="0" style="display: none;"></iframe>
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+    <script>
+        (function () {
+            const chatContainer = "blip-chat-container";
+            const bubbleMessage = "Olá, posso ajudar?";
+            const displayClassName = "display";
+            const hideClassName = "hide";
+            var closeIcon;
+            const iconId = "blip-chat-icon";
+            const closeId = "blip-chat-close-icon";
+            const topImage = "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c";
+            const bottomImage = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";
+            const startMessage = {
+                type: "text/plain",
+                content: "MALWEE",
+                metadata: {
+                    "#blip.hiddenMessage": true
+                }
+            }
+
+            function createBubble() {
+
+                bubbleContainer = document.createElement("div");
+                bubbleContainer.id = "bubble-container";
+
+                bubble = document.createElement("div");
+                bubble.id = "message-bubble";
+                bubble.onclick = function () { client.widget._openChat() }
+
+                var triangle = document.createElement("div");
+                triangle.id = "triangle";
+
+                var message = document.createElement("div");
+                message.id = "message";
+                message.innerHTML = bubbleMessage;
+
+                bubble.appendChild(message);
+                bubble.appendChild(triangle);
+                bubbleContainer.appendChild(bubble);
+
+                document
+                    .querySelector(`#${chatContainer}`)
+                    .prepend(bubbleContainer);
+
+            }
+
+            function displayBubble() {
+                bubble.classList.add(displayClassName);
+                bubble.classList.remove(hideClassName);
+            }
+
+            function displayBubble() {
+                bubble.classList.add(displayClassName);
+                bubble.classList.remove(hideClassName);
+            }
+
+            function hideBubble() {
+                bubble.classList.add(hideClassName);
+                bubble.classList.remove(displayClassName);
+            }
+
+
+            changeBubble = function () {
+                if (bubble.classList.contains(displayClassName))
+                    hideBubble();
+                else
+                    displayBubble();
+            }
+
+            function replaceImageStructure() {
+
+                closeIcon = document.querySelector(`#${closeId}`);
+                var oldImage = document.querySelector(`#${iconId}`);
+
+                var container = document.createElement("div");
+                container.id = iconId;
+
+                var img1 = document.createElement("img");
+                img1.src = topImage;
+                img1.classList.add("top")
+
+                var img2 = document.createElement("img");
+                img2.src = bottomImage;
+                img2.classList.add("bottom");
+
+                container.appendChild(img1);
+                container.appendChild(img2);
+
+                oldImage.parentElement.insertBefore(container, oldImage);
+                oldImage.remove();
+
+            }
+
+
+            window.onload = function () {
+                localStorage.removeItem('blipSdkUAccount');
+                var client = new BlipChat();
+                client
+                    .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
+                    .withButton({ "color": "#171717", "icon": "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c" })
+                    .withCustomCommonUrl('https://chat.blip.ai/')
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                        client.sendMessage(startMessage);
+                    })
+                    .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                        closeIcon.classList.add(displayClassName);
+                        closeIcon.classList.remove(hideClassName);
+                        hideBubble();
+                    })
+                    .withEventHandler(BlipChat.LEAVE_EVENT, function () {
+                        closeIcon.classList.add(hideClassName);
+                        closeIcon.classList.remove(displayClassName);
+                    })
+                    .build();
+                replaceImageStructure();
+                createBubble();
+                displayBubble();
+
+                setTimeout(function () {
+                    hideBubble();
+                }, 10000);
+
+
+
+            }
+        })();
+    </script>
+</body>
+
+</html>

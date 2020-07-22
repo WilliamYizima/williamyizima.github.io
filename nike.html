@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <span class="pl-2 pr-4 pr-sm-2 pr-lg-4"><a class="chat-header-general" href="javascript:void(0)"><img
-                src="https://images.lojanike.com.br/site/ni/icones/chat.png"> Chat Online</a></span>
     <iframe src="javascript:void(0)" title="" style="width: 0px; height: 0px; border: 0px; display: none;"></iframe>
-    <script>!function (a) { var e = "https://s.go-mpulse.net/boomerang/", t = "addEventListener"; if ("False" == "True") a.BOOMR_config = a.BOOMR_config || {}, a.BOOMR_config.PageParams = a.BOOMR_config.PageParams || {}, a.BOOMR_config.PageParams.pci = !0, e = "https://s2.go-mpulse.net/boomerang/"; if (window.BOOMR_API_key = "2YQ79-C9JER-B2SAN-D39ZH-84CKW", function () { function n(e) { a.BOOMR_onload = e && e.timeStamp || (new Date).getTime() } if (!a.BOOMR || !a.BOOMR.version && !a.BOOMR.snippetExecuted) { a.BOOMR = a.BOOMR || {}, a.BOOMR.snippetExecuted = !0; var i, o, _, r = document.createElement("iframe"); if (a[t]) a[t]("load", n, !1); else if (a.attachEvent) a.attachEvent("onload", n); r.src = "javascript:void(0)", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "width:0;height:0;border:0;display:none;", _ = document.getElementsByTagName("script")[0], _.parentNode.insertBefore(r, _); try { o = r.contentWindow.document } catch (O) { i = document.domain, r.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);", o = r.contentWindow.document } o.open()._l = function () { var a = this.createElement("script"); if (i) this.domain = i; a.id = "boomr-if-as", a.src = e + "2YQ79-C9JER-B2SAN-D39ZH-84CKW", BOOMR_lstart = (new Date).getTime(), this.body.appendChild(a) }, o.write("<bo" + 'dy onload="document._l();">'), o.close() } }(), "".length > 0) if (a && "performance" in a && a.performance && "function" == typeof a.performance.setResourceTimingBufferSize) a.performance.setResourceTimingBufferSize(); !function () { if (BOOMR = a.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) { var e = "" == "true" ? 1 : 0, t = "", n = "wfpshlqccdzbqxyygpza-f-aa3cb17be-clientnsv4-s.akamaihd.net", i = { "ak.v": "27", "ak.cp": "863731", "ak.ai": parseInt("543974", 10), "ak.ol": "0", "ak.cr": 21, "ak.ipv": 4, "ak.proto": "h2", "ak.rid": "6334ac12", "ak.r": 29800, "ak.a2": e, "ak.m": "x", "ak.n": "essl", "ak.bpcip": "177.95.35.0", "ak.cport": 54755, "ak.gh": "201.0.217.68", "ak.quicv": "", "ak.tlsv": "tls1.3", "ak.0rtt": "", "ak.csrc": "-", "ak.acc": "", "ak.t": "1595421682", "ak.ak": "hOBiQwZUYzCg5VSAfCLimQ==jV5HXQAlsyTXj+msC/gCmIlyvf9jDOAcRmX8bVRNFxDS3lWYa2ZxkkX7w6rVw08rb4A9fFbgE3MrnPhSrq9sr6SedYCxe5C81zKEgk5aI9q8NDxe3R/ZG5k5r8eBdmAVNXiAqRXAZHQQhtTUd9tvwOzLJG6eV5EBFIZlnYgW3rhB1XrJ4jTFGg9HC3Jo2eLZY/P/bo8aWuquzwyXRnfYFfXH9LY2XtnVfg85zOflK/CYYFgTEywwZp9mrttSlijccE6R3oW18mffN/8pPJpcE93AuObzibCsulvGDmXY7TIS7Qdv9VpP29/F36MMOyy5ZXWg0A9+Lh4EaeXDMkJGt210iMI36DMUX1y9cRD4D/Aj+OODelpm6pn6ut/1rrT2Q0lgRSvsD3qsJToEfBmvg/cD6si1wdhKLbSdQso66Ng=", "ak.pv": "16" }; if ("" !== t) i["ak.ruds"] = t; var o = { i: !1, av: function (e) { var t = "http.initiator"; if (e && (!e[t] || "spa_hard" === e[t])) i["ak.feo"] = void 0 !== a.aFeoApplied ? 1 : 0, BOOMR.addVar(i) }, rv: function () { var a = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t"]; BOOMR.removeVar(a) } }; BOOMR.plugins.AK = { akVars: i, akDNSPreFetchDomain: n, init: function () { if (!o.i) { var a = BOOMR.subscribe; a("before_beacon", o.av, null, null), a("onbeacon", o.rv, null, null), o.i = !0 } return this }, is_complete: function () { return !0 } } } }() }(window);</script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://unpkg.com/blip-chat-widget"></script>
     <style type="text/css">
@@ -152,7 +149,7 @@
         }
     </style>
     <script src="static-script.js" type="text/javascript"></script>
-    <!-- <div id="blip-chat-container" style="display: block;">
+    <div id="blip-chat-container" style="display: block;">
         <div id="bubble-container">
             <div id="message-bubble" class="hide">
                 <div id="message">Oi, como posso te ajudar?</div>
@@ -176,7 +173,7 @@
                     </g>
                 </g>
             </svg>
-        </div> -->
+        </div>
 
         <style>
             #blip-chat-open-iframe {
@@ -299,111 +296,110 @@
         id="destination_publishing_iframe_nike_0" name="destination_publishing_iframe_nike_0_name"
         src="https://nike.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.nike.com.br" class="aamIframeLoaded"
         style="display: none; width: 0px; height: 0px;"></iframe>
-    <iframe id="RTBhouseAllPages" src="//us.creativecdn.com/tags?id=pr_ROD6P17l68yZEAcx1Frx&amp;ncm=1" width="1"
-        height="1" scrolling="no" frameborder="0" style="display: none;"></iframe>
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
-    </script>
-    <script>
-        (function () {
-            const chatContainer = "blip-chat-container";
-            const bubbleMessage = "Olá, posso ajudar?";
-            const displayClassName = "display";
-            const hideClassName = "hide";
-            var closeIcon;
-            const iconId = "blip-chat-icon";
-            const closeId = "blip-chat-close-icon";
-            const topImage = "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c";
-            const bottomImage = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";
-            const startMessage = {
-                type: "text/plain",
-                content: "MALWEE",
-                metadata: {
-                    "#blip.hiddenMessage": true
+        <iframe id="RTBhouseAllPages" src="//us.creativecdn.com/tags?id=pr_ROD6P17l68yZEAcx1Frx&amp;ncm=1" width="1" height="1" scrolling="no" frameborder="0" style="display: none;"></iframe>
+        <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+        </script>
+        <script>
+            (function () {
+                const chatContainer = "blip-chat-container";
+                const bubbleMessage = "Olá, posso ajudar?";
+                const displayClassName = "display";
+                const hideClassName = "hide";
+                var closeIcon;
+                const iconId = "blip-chat-icon";
+                const closeId = "blip-chat-close-icon";
+                const topImage = "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c";
+                const bottomImage = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";
+                const startMessage = {
+                    type: "text/plain",
+                    content: "MALWEE",
+                    metadata: {
+                        "#blip.hiddenMessage": true
+                    }
                 }
-            }
-
-            function createBubble() {
-
-                bubbleContainer = document.createElement("div");
-                bubbleContainer.id = "bubble-container";
-
-                bubble = document.createElement("div");
-                bubble.id = "message-bubble";
-                bubble.onclick = function () { client.widget._openChat() }
-
-                var triangle = document.createElement("div");
-                triangle.id = "triangle";
-
-                var message = document.createElement("div");
-                message.id = "message";
-                message.innerHTML = bubbleMessage;
-
-                bubble.appendChild(message);
-                bubble.appendChild(triangle);
-                bubbleContainer.appendChild(bubble);
-
-                document
+    
+                function createBubble(){
+    
+                    bubbleContainer = document.createElement("div");
+                    bubbleContainer.id = "bubble-container";
+    
+                    bubble = document.createElement("div");
+                    bubble.id = "message-bubble";
+                    bubble.onclick = function(){ client.widget._openChat() }
+    
+                    var triangle = document.createElement("div");
+                    triangle.id = "triangle";
+    
+                    var message = document.createElement("div");
+                    message.id = "message";
+                    message.innerHTML = bubbleMessage;
+    
+                    bubble.appendChild(message);
+                    bubble.appendChild(triangle);
+                    bubbleContainer.appendChild(bubble);
+    
+                    document
                     .querySelector(`#${chatContainer}`)
                     .prepend(bubbleContainer);
-
-            }
-
-            function displayBubble() {
+    
+                }
+    
+                function displayBubble(){
+                    bubble.classList.add(displayClassName);
+                    bubble.classList.remove(hideClassName);
+                }
+    
+                function displayBubble(){
                 bubble.classList.add(displayClassName);
                 bubble.classList.remove(hideClassName);
-            }
-
-            function displayBubble() {
-                bubble.classList.add(displayClassName);
-                bubble.classList.remove(hideClassName);
-            }
-
-            function hideBubble() {
-                bubble.classList.add(hideClassName);
-                bubble.classList.remove(displayClassName);
-            }
-
-
-            changeBubble = function () {
-                if (bubble.classList.contains(displayClassName))
-                    hideBubble();
-                else
-                    displayBubble();
-            }
-
-            function replaceImageStructure() {
-
+                }
+    
+                function hideBubble(){
+                    bubble.classList.add(hideClassName);
+                    bubble.classList.remove(displayClassName);
+                }
+    
+    
+                changeBubble = function () {
+                    if (bubble.classList.contains(displayClassName))
+                        hideBubble();
+                    else
+                        displayBubble();
+                }
+    
+                function replaceImageStructure() {
+    
                 closeIcon = document.querySelector(`#${closeId}`);
                 var oldImage = document.querySelector(`#${iconId}`);
-
+    
                 var container = document.createElement("div");
                 container.id = iconId;
-
+    
                 var img1 = document.createElement("img");
                 img1.src = topImage;
                 img1.classList.add("top")
-
+    
                 var img2 = document.createElement("img");
                 img2.src = bottomImage;
                 img2.classList.add("bottom");
-
+    
                 container.appendChild(img1);
                 container.appendChild(img2);
-
+    
                 oldImage.parentElement.insertBefore(container, oldImage);
                 oldImage.remove();
-
-            }
-
-
-            window.onload = function () {
-                localStorage.removeItem('blipSdkUAccount');
-                var client = new BlipChat();
-                client
+    
+                }
+                
+    
+                window.onload = function () {
+                    localStorage.removeItem('blipSdkUAccount');
+                    var client = new BlipChat();
+                    client
                     .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
-                    .withButton({ "color": "#171717", "icon": "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c" })
+                    .withButton({"color":"#171717","icon":"https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c"})
                     .withCustomCommonUrl('https://chat.blip.ai/')
-                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function(){
                         client.sendMessage(startMessage);
                     })
                     .withEventHandler(BlipChat.ENTER_EVENT, function () {
@@ -416,19 +412,19 @@
                         closeIcon.classList.remove(displayClassName);
                     })
                     .build();
-                replaceImageStructure();
-                createBubble();
-                displayBubble();
-
-                setTimeout(function () {
-                    hideBubble();
-                }, 10000);
-
-
-
-            }
-        })();
-    </script>
+                    replaceImageStructure();
+                    createBubble();
+                    displayBubble();
+                    
+                    setTimeout(function(){
+                        hideBubble();
+                    }, 10000);
+                    
+    
+    
+                }
+            })();
+        </script>
 </body>
 
 </html>

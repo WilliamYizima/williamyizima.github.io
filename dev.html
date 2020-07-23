@@ -528,9 +528,11 @@
                         self.ToggleStartScreen(false);
                     }
                     self._isLoaded = true;
-                    self._closeIcon.classList.add(self._displayClassName);
-                    self._closeIcon.classList.remove(self._hideClassName);
-                    self.hideBubble();
+                    // self._closeIcon.classList.add(self._displayClassName);
+                    // self._closeIcon.classList.remove(self._hideClassName);
+                    closeIcon.classList.add(displayClassName);
+                    closeIcon.classList.remove(hideClassName);
+                    hideBubble();
 
                     if (localStorage.getItem("blipSdkUAccount")) {
                         var obj = JSON.parse(atob(localStorage.getItem("blipSdkUAccount")));
@@ -544,9 +546,9 @@
                     self.container.classList.add(self._openClassName);
 
                     self.toggleIframe(true);
-                    closeIcon.classList.add(displayClassName);
-                    closeIcon.classList.remove(hideClassName);
-                    hideBubble();
+                    // closeIcon.classList.add(displayClassName);
+                    // closeIcon.classList.remove(hideClassName);
+                    // hideBubble();
                 })
                 // .withEventHandler(BlipChat.ENTER_EVENT, function () {
                 //     closeIcon.classList.add(displayClassName);

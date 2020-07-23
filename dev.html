@@ -367,7 +367,7 @@
             };
 
             this.toggleIframe = function (visible) {
-                var iframeContainer = document.getElementById("blip-chat-iframe-container");
+                var iframeContainer = document.getElementById("blip-chat-iframe-open-container");
 
                 if (!visible) {
                     setTimeout(function () {
@@ -389,8 +389,9 @@
                 }
             };
             this.reorderIframe = function () {
-                self.container = document.createElement("div");
-                self.container.id = "blip-chat-iframe-container";
+                // self.container = document.createElement("div");
+                self.container = document.getElementById("blip-chat-iframe-open-container");
+                // self.container.id = "blip-chat-iframe-container";
 
                 document.querySelector("#blip-chat-container").append(self.container);
 

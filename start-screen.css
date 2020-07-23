@@ -269,14 +269,14 @@ input::placeholder {
     background-size: 37px 37px !important;
 }
 
-.search-image {
+/* .search-image {
     background: url(../images/question.png);
 }
 
 .recall-image {
     background: url(../images/search.svg);
 }
-
+ */
 
 
 @media only screen and (max-width : 425px) {

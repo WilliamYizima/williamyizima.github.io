@@ -25,13 +25,13 @@
   })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
   
   var StartScreenWidget = function () {
-    let BASE_URL = "https://nikestartscreen.cs.blip.ai";
-    let STYLE_URL = BASE_URL + "style.css";
+    let BASE_URL = "https://williamyizima.github.io";
+    let STYLE_URL = BASE_URL + "/start-screen.css";
     let START_SCREEN_URL = BASE_URL + "/static-start-screen.html";
     let APP_KEY =
-      "aW5mcmFjb21tZXJjZW5pa2Vwcm9kOjBkODkzOWY0LWEyNzAtNGFmNy1hYTllLWU2YjU0YzhiMmI1NA==";
-    let BOTTOM_IMAGE_URL = BASE_URL + "/assets/images/nike_icon_white.svg";
-    let TOP_IMAGE_URL = BASE_URL + "/assets/images/nike_icon_white.svg";
+      "cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz";
+    let BOTTOM_IMAGE_URL = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";
+    let TOP_IMAGE_URL = "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c";
     let STARTING_COLOR = "#000000";
   
     var headElement = document.getElementsByTagName("head")[0];

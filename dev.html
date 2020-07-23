@@ -522,10 +522,37 @@
                     }
                 })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                    if (!self._isLoaded) {
+                        self.reorderIframe();
+                    } else {
+                        self.ToggleStartScreen(false);
+                    }
+                    self._isLoaded = true;
+                    self._closeIcon.classList.add(self._displayClassName);
+                    self._closeIcon.classList.remove(self._hideClassName);
+                    self.hideBubble();
+
+                    if (localStorage.getItem("blipSdkUAccount")) {
+                        var obj = JSON.parse(atob(localStorage.getItem("blipSdkUAccount")));
+                        if (obj && obj.userIdentity) {
+                            self._userIdentity = obj.userIdentity;
+                        }
+                    }
+
+                    self.enqueueTrackFunction(self.trackStartScreen);
+
+                    self.container.classList.add(self._openClassName);
+
+                    self.toggleIframe(true);
                     closeIcon.classList.add(displayClassName);
                     closeIcon.classList.remove(hideClassName);
                     hideBubble();
                 })
+                // .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                //     closeIcon.classList.add(displayClassName);
+                //     closeIcon.classList.remove(hideClassName);
+                //     hideBubble();
+                // })
                 .withEventHandler(BlipChat.LEAVE_EVENT, function () {
                     closeIcon.classList.add(hideClassName);
                     closeIcon.classList.remove(displayClassName);

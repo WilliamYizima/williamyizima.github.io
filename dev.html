@@ -274,7 +274,7 @@
                     return 1;
                 } else if (element.getAttribute("close-start-screen")) {
                     self.toggleIframe(false);
-                    self.enqueueTrackFunction(self.trackCloseStartScreen);
+                    // self.enqueueTrackFunction(self.trackCloseStartScreen);
                     self.chat.widget._openChat();
                     return 1;
                 }
@@ -313,12 +313,12 @@
                             }
                         }
 
-                        if (self._userIdentity) {
-                            while (self._trackSequence.length) {
-                                var fnc = self._trackSequence.splice(0, 1)[0];
-                                fnc();
-                            }
-                        }
+                        // if (self._userIdentity) {
+                        //     while (self._trackSequence.length) {
+                        //         var fnc = self._trackSequence.splice(0, 1)[0];
+                        //         fnc();
+                        //     }
+                        // }
 
                         while (self._messageSequence.length) {
                             var msgFnc = self._messageSequence.splice(0, 1)[0];
@@ -439,7 +439,7 @@
                             .getElementById("blip-chat-close-icon")
                             .addEventListener("click", function (event) {
                                 self.toggleIframe(false);
-                                self.enqueueTrackFunction(self.trackCloseStartScreen);
+                                // self.enqueueTrackFunction(self.trackCloseStartScreen);
                             });
 
                         document

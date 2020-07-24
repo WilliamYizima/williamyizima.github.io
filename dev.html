@@ -112,9 +112,10 @@
 
         window.onload = function () {
 
-            localStorage.removeItem('blipSdkUAccount');
+            // localStorage.removeItem('blipSdkUAccount');
 
             // code nike
+            let BASE_URL = "https://williamyizima.github.io";
             let STYLE_URL = "style.css";
             let START_SCREEN_URL = "form.html";
             let APP_KEY = "cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz";
@@ -541,7 +542,7 @@
                         }
                     }
 
-                    self.enqueueTrackFunction(self.trackStartScreen);
+                    // self.enqueueTrackFunction(self.trackStartScreen);
 
                     self.container.classList.add(self._openClassName);
 

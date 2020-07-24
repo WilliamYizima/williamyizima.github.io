@@ -417,10 +417,12 @@
                         self.container.append(self.startScreen);
                     })
                     .then(function (c) {
+                        console.log('passei no c')
                         document
                             .getElementById("question-input-recall")
                             .addEventListener("keyup", function (event) {
                                 if (event.keyCode === 13) {
+                                    console.log('enviei no question recall')
                                     event.preventDefault();
                                     document.getElementById("click-question-recall").click();
                                 }
@@ -430,6 +432,7 @@
                             .getElementById("question-input")
                             .addEventListener("keyup", function (event) {
                                 if (event.keyCode === 13) {
+                                    console.log('enviei no click question')
                                     event.preventDefault();
                                     document.getElementById("click-question").click();
                                 }

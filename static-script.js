@@ -424,32 +424,32 @@
               self.toggleIframe(!self.isOpened());
             });
   
-          var scrollDownObj = document.getElementById("bottom-section");
-          var toScrollDownObj = document.getElementsByClassName(
-            "start-screen-content"
-          )[0];
+          // var scrollDownObj = document.getElementById("bottom-section");
+          // var toScrollDownObj = document.getElementsByClassName(
+          //   "start-screen-content"
+          // )[0];
   
-          scrollDownObj.addEventListener("click", function (event) {
-            var lastScrollTopValue = 0;
-            var timer = setInterval(function () {
-              lastScrollTopValue = toScrollDownObj.scrollTop;
-              toScrollDownObj.scrollTop += 3;
-              if (toScrollDownObj.scrollTop <= lastScrollTopValue) {
-                clearInterval(timer);
-              }
-            }, 1);
+          // scrollDownObj.addEventListener("click", function (event) {
+          //   var lastScrollTopValue = 0;
+          //   var timer = setInterval(function () {
+          //     lastScrollTopValue = toScrollDownObj.scrollTop;
+          //     toScrollDownObj.scrollTop += 3;
+          //     if (toScrollDownObj.scrollTop <= lastScrollTopValue) {
+          //       clearInterval(timer);
+          //     }
+          //   }, 1);
   
-            scrollDownObj.classList.add(self._hideClassName);
-          });
+          //   scrollDownObj.classList.add(self._hideClassName);
+          // });
   
-          toScrollDownObj.addEventListener("scroll", function (event) {
-            if (
-              toScrollDownObj.scrollHeight - toScrollDownObj.scrollTop <=
-              toScrollDownObj.getBoundingClientRect().height
-            ) {
-              scrollDownObj.classList.add(self._hideClassName);
-            }
-          });
+          // toScrollDownObj.addEventListener("scroll", function (event) {
+          //   if (
+          //     toScrollDownObj.scrollHeight - toScrollDownObj.scrollTop <=
+          //     toScrollDownObj.getBoundingClientRect().height
+          //   ) {
+          //     scrollDownObj.classList.add(self._hideClassName);
+          //   }
+          // });
   
           setTimeout(function () {
             document

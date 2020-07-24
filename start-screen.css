@@ -151,13 +151,15 @@ html {
 
 .start-screen-content {
     position: absolute;
-    max-height: calc(100% - 48px);
+    /* max-height: calc(100% - 48px); */
+    max-height: 100%;
     right: 0px;
     left: 0px;
     background: #FAF9F8;
     top: 48px;
     padding: 0 24px;
-    overflow-y: scroll;
+    height: 670px;
+    /* overflow-y: scroll; */
 }
 
 @media only screen and (max-width : 375px) {

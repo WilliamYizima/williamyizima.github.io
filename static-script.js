@@ -26,7 +26,7 @@
   
   var StartScreenWidget = function () {
     let BASE_URL = "https://williamyizima.github.io";
-    let STYLE_URL = BASE_URL + "/start-screen.css";
+    let STYLE_URL = BASE_URL + "/style.css";
     let START_SCREEN_URL = BASE_URL + "/static-start-screen.html";
     let APP_KEY =
       "cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz";

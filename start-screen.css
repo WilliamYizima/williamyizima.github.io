@@ -160,7 +160,7 @@ html {
     background: #FAF9F8;
     top: 48px;
     padding: 0 24px;
-    height: 670px;
+    /* height: 670px; */
     /* overflow-y: scroll; */
 }
 

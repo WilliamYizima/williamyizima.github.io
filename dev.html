@@ -192,47 +192,47 @@
                 }
             };
 
-            this.trackStartScreen = function () {
-                try {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open(
-                        "POST",
-                        self._apiUrl +
-                        "/utils/track/start-screen?userIdentity=" +
-                        self._userIdentity,
-                        true
-                    );
-                    xhr.send();
-                } catch (e) {
-                    /*do nothing*/
-                }
-            };
+            // this.trackStartScreen = function () {
+            //     try {
+            //         var xhr = new XMLHttpRequest();
+            //         xhr.open(
+            //             "POST",
+            //             self._apiUrl +
+            //             "/utils/track/start-screen?userIdentity=" +
+            //             self._userIdentity,
+            //             true
+            //         );
+            //         xhr.send();
+            //     } catch (e) {
+            //         /*do nothing*/
+            //     }
+            // };
 
-            this.trackCloseStartScreen = function () {
-                try {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open(
-                        "POST",
-                        self._apiUrl +
-                        "/utils/track/close-start-screen?userIdentity=" +
-                        self._userIdentity,
-                        true
-                    );
-                    xhr.send();
-                } catch (e) {
-                    /*do nothing*/
-                }
-            };
-            this.enqueueTrackFunction = function (fnc) {
-                self._trackSequence.push(fnc);
+            // this.trackCloseStartScreen = function () {
+            //     try {
+            //         var xhr = new XMLHttpRequest();
+            //         xhr.open(
+            //             "POST",
+            //             self._apiUrl +
+            //             "/utils/track/close-start-screen?userIdentity=" +
+            //             self._userIdentity,
+            //             true
+            //         );
+            //         xhr.send();
+            //     } catch (e) {
+            //         /*do nothing*/
+            //     }
+            // };
+            // this.enqueueTrackFunction = function (fnc) {
+            //     self._trackSequence.push(fnc);
 
-                if (self._userIdentity) {
-                    while (self._trackSequence.length) {
-                        var func = self._trackSequence.splice(0, 1)[0];
-                        func();
-                    }
-                }
-            };
+            //     if (self._userIdentity) {
+            //         while (self._trackSequence.length) {
+            //             var func = self._trackSequence.splice(0, 1)[0];
+            //             func();
+            //         }
+            //     }
+            // };
 
             this.sendMessage = function (msg, contentType) {
                 var sendMessageFunction = function () {
@@ -256,15 +256,17 @@
             };
             this.processActionByElement = function (element) {
                 if (!element.attributes || element.attributes.length === 0) {
+                    console.log('retornando 0 process l259')
                     return 0;
                 }
                 var payload = element.getAttribute("payload");
-
+                console.log('peguei um payload',payload)
                 if (payload) {
                     if (payload.indexOf(":") >= 0) {
                         var payloadItems = payload.split(":");
                         var selectorId = payloadItems[payloadItems.length - 1];
                         var message = document.getElementById(selectorId).value;
+                        console.log('payload:',payload)
                         if (message) {
                             self.sendMessage(message, payloadItems[0]);
                         }
@@ -320,10 +322,10 @@
                         //     }
                         // }
 
-                        while (self._messageSequence.length) {
-                            var msgFnc = self._messageSequence.splice(0, 1)[0];
-                            msgFnc();
-                        }
+                        // while (self._messageSequence.length) {
+                        //     var msgFnc = self._messageSequence.splice(0, 1)[0];
+                        //     msgFnc();
+                        // }
                     }
                 });
             };

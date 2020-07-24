@@ -233,10 +233,10 @@
             //         }
             //     }
             // };
-
+            
             this.sendMessage = function (msg, contentType) {
                 var sendMessageFunction = function () {
-                    self.chat.sendMessage({
+                    self.sendMessage({
                         type: "text/plain",
                         content: msg,
                         metadata: {
@@ -282,6 +282,10 @@
                 }
                 return 0;
             };
+            document.querySelector(".subject-item").addEventListener("click", function (event) {
+            
+                alert('oi')
+            })
             this.handler = function () {
                 document.addEventListener("click", function (event) {
                     if (event.srcElement) {
@@ -585,6 +589,7 @@
 
         }
     })();
+
 </script>
 
 

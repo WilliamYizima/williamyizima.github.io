@@ -507,8 +507,12 @@
 
             this.loadWidget = function (appKey) {
                 self.chat = new BlipChat()
-                    .withAppKey(appKey)
-                    .withButton({ color: self._startingColor })
+                    .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
+                    .withButton({ "color": "#171717", "icon": "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c" })
+                    .withCustomCommonUrl('https://chat.blip.ai/')
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                        client.sendMessage(startMessage);
+                    })
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         var iframe = document.getElementById("blip-chat-iframe");
                         iframe.contentWindow.postMessage(
@@ -530,9 +534,11 @@
                             self.ToggleStartScreen(false);
                         }
                         self._isLoaded = true;
-                        self._closeIcon.classList.add(self._displayClassName);
-                        self._closeIcon.classList.remove(self._hideClassName);
-                        self.hideBubble();
+                        // self._closeIcon.classList.add(self._displayClassName);
+                        // self._closeIcon.classList.remove(self._hideClassName);
+                        closeIcon.classList.add(displayClassName);
+                        closeIcon.classList.remove(hideClassName);
+                        hideBubble();
 
                         if (localStorage.getItem("blipSdkUAccount")) {
                             var obj = JSON.parse(atob(localStorage.getItem("blipSdkUAccount")));
@@ -541,37 +547,39 @@
                             }
                         }
 
-                        self.enqueueTrackFunction(self.trackStartScreen);
+                        // self.enqueueTrackFunction(self.trackStartScreen);
 
                         self.container.classList.add(self._openClassName);
 
                         self.toggleIframe(true);
+                        // closeIcon.classList.add(displayClassName);
+                        // closeIcon.classList.remove(hideClassName);
+                        // hideBubble();
                     })
+                    // .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                    //     closeIcon.classList.add(displayClassName);
+                    //     closeIcon.classList.remove(hideClassName);
+                    //     hideBubble();
+                    // })
                     .withEventHandler(BlipChat.LEAVE_EVENT, function () {
-                        self.container.classList.remove(self._openClassName);
-                        self._closeIcon.classList.add(self._hideClassName);
-                        self._closeIcon.classList.remove(self._displayClassName);
-                        self.container.classList.add(self._hideClassName);
-                    });
+                        closeIcon.classList.add(hideClassName);
+                        closeIcon.classList.remove(displayClassName);
+                    })
+                    .build();
+                replaceImageStructure();
+                createBubble();
+                displayBubble();
 
-                self.chat.build();
-                self.replaceImageStructure();
-                self.createBubble();
-
-                self.displayBubble();
                 setTimeout(function () {
-                    self.hideBubble();
+                    hideBubble();
                 }, 10000);
             };
-
             this.load = function () {
                 self.loadBlipExtension().then(function () {
                     self.loadWidget(self._appKey);
                 });
                 self.handler();
             };
-
-
             this.loadWidgetHide = function (appKey) {
                 self.chat = new BlipChat()
                     .withAppKey(appKey)
@@ -631,85 +639,12 @@
                     self.hideBubble();
                 }, 10000);
             };
-
             this.loadHide = function () {
                 self.loadBlipExtension().then(function () {
                     self.loadWidgetHide(self._appKey);
                 });
                 self.handler();
             };
-
-            var client = new BlipChat();
-            client
-                .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
-                .withButton({ "color": "#171717", "icon": "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c" })
-                .withCustomCommonUrl('https://chat.blip.ai/')
-                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
-                    client.sendMessage(startMessage);
-                })
-                .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                    var iframe = document.getElementById("blip-chat-iframe");
-                    iframe.contentWindow.postMessage(
-                        { code: "ShowCloseButton", showCloseButton: true },
-                        iframe.src
-                    );
-                    self._blipChatLoadSuccessful = true;
-                    if (self._showMainDiv) {
-                        document
-                            .getElementById("blip-chat-button-over")
-                            .classList.add("show");
-                        self._showMainDiv = false;
-                    }
-                })
-                .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                    if (!self._isLoaded) {
-                        self.reorderIframe();
-                    } else {
-                        self.ToggleStartScreen(false);
-                    }
-                    self._isLoaded = true;
-                    // self._closeIcon.classList.add(self._displayClassName);
-                    // self._closeIcon.classList.remove(self._hideClassName);
-                    closeIcon.classList.add(displayClassName);
-                    closeIcon.classList.remove(hideClassName);
-                    hideBubble();
-
-                    if (localStorage.getItem("blipSdkUAccount")) {
-                        var obj = JSON.parse(atob(localStorage.getItem("blipSdkUAccount")));
-                        if (obj && obj.userIdentity) {
-                            self._userIdentity = obj.userIdentity;
-                        }
-                    }
-
-                    // self.enqueueTrackFunction(self.trackStartScreen);
-
-                    self.container.classList.add(self._openClassName);
-
-                    self.toggleIframe(true);
-                    // closeIcon.classList.add(displayClassName);
-                    // closeIcon.classList.remove(hideClassName);
-                    // hideBubble();
-                })
-                // .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                //     closeIcon.classList.add(displayClassName);
-                //     closeIcon.classList.remove(hideClassName);
-                //     hideBubble();
-                // })
-                .withEventHandler(BlipChat.LEAVE_EVENT, function () {
-                    closeIcon.classList.add(hideClassName);
-                    closeIcon.classList.remove(displayClassName);
-                })
-                .build();
-            replaceImageStructure();
-            createBubble();
-            displayBubble();
-
-            setTimeout(function () {
-                hideBubble();
-            }, 10000);
-
-
-
         }
     })();
 </script>

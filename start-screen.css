@@ -154,6 +154,7 @@ html {
     position: absolute;
     /* max-height: calc(100% - 48px); */
     max-height: 100%;
+    height:100%;
     right: 0px;
     left: 0px;
     background: #FAF9F8;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bubble.css">
     <title>Bot Teste</title>
+    
 </head>
 
 <body style="background-color:#669999;">
@@ -17,7 +18,8 @@
 </script>
 <script>
 
-    (function () {
+    (
+        function () {
         const chatContainer = "blip-chat-container";
         const bubbleMessage = "Olá, posso ajudar?";
         const displayClassName = "display";
@@ -142,7 +144,7 @@
 
 
             var self = this;
-            this._widgetLocation = "https://unpkg.com/blip-chat-widget";
+            // this._widgetLocation = "https://unpkg.com/blip-chat-widget";
             this._apiUrl = "";
             this._userIdentity = null;
             this._openClassName = "blip-chat-iframe-opened";
@@ -186,8 +188,9 @@
                         }
                     } else {
                         startScreen.classList.remove("hide");
-                        chatOver.classList.remove("show");
+
                         mainDiv.classList.remove("slide");
+                        chatOver.classList.remove("show");
                     }
                 }
             };
@@ -438,6 +441,7 @@
                                     console.log('enviei no click question')
                                     event.preventDefault();
                                     document.getElementById("click-question").click();
+                                    self.ToggleStartScreen(true);
                                 }
                             });
 
@@ -512,12 +516,13 @@
             client
                 .withAppKey('cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz')
                 // .withButton({ "color": "#171717", "icon": "https://s3-sa-east-1.amazonaws.com/msging.net/Services/Images/c884bb06-116d-413d-aa66-aac02b28ea9c" })
-                .withButton({ "color": "#171717"})
+                .withButton({ "color": "#171717" })
                 .withCustomCommonUrl('https://chat.blip.ai/')
                 .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
                     client.sendMessage(startMessage);
                 })
                 .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                    
                     var iframe = document.getElementById("blip-chat-iframe");
                     iframe.contentWindow.postMessage(
                         { code: "ShowCloseButton", showCloseButton: true },
@@ -525,6 +530,7 @@
                     );
                     self._blipChatLoadSuccessful = true;
                     if (self._showMainDiv) {
+                        
                         document
                             .getElementById("blip-chat-button-over")
                             .classList.add("show");
@@ -532,14 +538,46 @@
                     }
                 })
                 .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                    document.querySelector('.subject-item').addEventListener("click",function (event) {
+                    document.querySelector('.troca-produto').addEventListener("click",function (event) {
                         client.sendMessage({
                             type: "text/plain",
-                            content: "Ver meus pedidos",
+                            content: "Trocar Produtos",
                             metadata: {
                                 "#blip.hiddenMessage": false
                             }
                         });
+                        self.ToggleStartScreen(true);
+                        var chatOver = document.getElementById("blip-chat-button-over");
+                        chatOver.classList.add("show");
+                    
+
+                })
+                    document.querySelector('.pedir-reembolso').addEventListener("click",function (event) {
+                        client.sendMessage({
+                            type: "text/plain",
+                            content: "Pedir reembolso",
+                            metadata: {
+                                "#blip.hiddenMessage": false
+                            }
+                        });
+                        self.ToggleStartScreen(true);
+                        var chatOver = document.getElementById("blip-chat-button-over");
+                        chatOver.classList.add("show");
+
+
+                    })
+                    document.querySelector('.falar-atendente').addEventListener("click",function (event) {
+                        client.sendMessage({
+                            type: "text/plain",
+                            content: "falar com um atendente",
+                            metadata: {
+                                "#blip.hiddenMessage": false
+                            }
+                        });
+                    self.ToggleStartScreen(true);
+                        var chatOver = document.getElementById("blip-chat-button-over");
+                        chatOver.classList.add("show");
+                        
                     })
                 })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
@@ -554,6 +592,7 @@
                     closeIcon.classList.add(displayClassName);
                     closeIcon.classList.remove(hideClassName);
                     hideBubble();
+                    
 
                     if (localStorage.getItem("blipSdkUAccount")) {
                         var obj = JSON.parse(atob(localStorage.getItem("blipSdkUAccount")));
@@ -567,9 +606,9 @@
                     self.container.classList.add(self._openClassName);
 
                     self.toggleIframe(true);
-                    // closeIcon.classList.add(displayClassName);
-                    // closeIcon.classList.remove(hideClassName);
-                    // hideBubble();
+                    closeIcon.classList.add(displayClassName);
+                    closeIcon.classList.remove(hideClassName);
+                    hideBubble();
                 })
                 // .withEventHandler(BlipChat.ENTER_EVENT, function () {
                 //     closeIcon.classList.add(displayClassName);
@@ -581,20 +620,23 @@
                     closeIcon.classList.remove(displayClassName);
                 })
                 .build();
-            replaceImageStructure();
-            createBubble();
-            displayBubble();
+
+                replaceImageStructure();
+                createBubble();
+                displayBubble();
+                
+
             // this.handler();
 
             setTimeout(function () {
                 hideBubble();
             }, 10000);
-            this.load = function () {
-                self.loadBlipExtension().then(function () {
-                    self.loadWidget(self._appKey);
-                });
-                // self.handler();
-            };
+            // this.load = function () {
+            //     self.loadBlipExtension().then(function () {
+            //         self.loadWidget(self._appKey);
+            //     });
+            //     // self.handler();
+            // };
 
 
 

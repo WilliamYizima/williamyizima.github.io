@@ -12,6 +12,20 @@ html {
     width: 100%;
 }
 
+#blip-chat-button-over.animation{
+    animation: fadeOut 2s;
+
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 #blip-chat-button-over.show {
     display: block;
 }
@@ -33,6 +47,10 @@ html {
     position: absolute;
     float: left;
     padding-left: 24px;
+}
+
+.blip-chat-container:hover img{
+    background:  url(imgs/bg/04.2.jpg);
 }
 
 #chat-over {
@@ -134,7 +152,8 @@ html {
 .greeting-phrase {
     position: absolute;
     font-family: Montserrat;
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 17px;
     color: #f9f9f9;
     /* left: 68px; */
     left: 11px;
@@ -273,14 +292,14 @@ input::placeholder {
     background-size: 37px 37px !important;
 }
 
-/* .search-image {
-    background: url(../images/question.png);
+ .search-image {
+    background: url(question.png);
 }
 
-.recall-image {
+/* .recall-image {
     background: url(../images/search.svg);
-}
- */
+} */
+
 
 
 @media only screen and (max-width : 425px) {

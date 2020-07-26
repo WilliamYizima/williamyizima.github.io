@@ -128,11 +128,14 @@ g#close {
 
 #blip-chat-container #blip-chat-open-iframe img,
 #blip-chat-container #blip-chat-open-iframe svg {
-    width: 90% !important;
+    /* width: 90% !important; */
+    width: 100% !important;
     height: auto !important;
     border-radius: 50% !important;
-    left: 4px !important;
-    top: 3px !important;
+    /* left: 4px !important; */
+    left: 1px !important;
+    /* top: 3px !important; */
+    top: 0px !important;
 }
 
 @media (max-width: 480px) {

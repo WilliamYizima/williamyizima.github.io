@@ -41,9 +41,9 @@
         });
     })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 
-    
+
     var StartScreenWidget = function () {
-        
+
         let BASE_URL = "http://localhost:8080";// Local onde está hospedado minha instancia do blip
         let STYLE_URL = "style.css";// Local onde está hospedado meu css do blip chat
         let START_SCREEN_URL = "form.html";// Local onde está meu html padrão, aqui já tem o css do start-screen
@@ -75,7 +75,7 @@
         headElement.appendChild(blipChatStartScreenStyleCss);
         headElement.appendChild(robotoFont);
         //fim
-        
+
         //fala sobre as variáveis
         var self = this;
         this._widgetLocation = "https://unpkg.com/blip-chat-widget";
@@ -461,6 +461,15 @@
             self.chat = new BlipChat()
                 .withAppKey(appKey)
                 .withButton({ color: self._startingColor })
+                .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                    self.chat.sendMessage(startMessage = {
+                        type: "text/plain",
+                        content: "MALWEE",
+                        metadata: {
+                            "#blip.hiddenMessage": true
+                        }
+                    });
+                })
                 .withEventHandler(BlipChat.LOAD_EVENT, function () {
                     var iframe = document.getElementById("blip-chat-iframe");
                     iframe.contentWindow.postMessage(
@@ -591,11 +600,11 @@
     }
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      startScreen = new StartScreenWidget();
-      startScreen.load();
+    document.addEventListener("DOMContentLoaded", function () {
+        startScreen = new StartScreenWidget();
+        startScreen.load();
     });
-  </script>
+</script>
 
 
 

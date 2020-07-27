@@ -220,7 +220,13 @@
                     var payloadItems = payload.split(":");
                     var selectorId = payloadItems[payloadItems.length - 1];
                     var message = document.getElementById(selectorId).value;//pegar o valor do elemento com payload
+                    
+                    console.log(selectorId)
+                    if(selectorId =='question-input-recall'){
+                        message = `meu cpf é ${message}` ;
+                    }
                     if (message) {
+                        
                         self.sendMessage(message, payloadItems[0]);//envia mensagem do payload
                     }
                 } else {

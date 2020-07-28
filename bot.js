@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bubble.css">
-    <title>Bot Teste</title>
-
-</head>
-
-<body style="background-color:#669999;">
-    <h1>Bot de Teste</h1>
-    <a href="dev.html"> oi pular para outra página</a>
-</body>
-<script src="bot.js"></script>
-<!-- <script>
     (function (arr) {
         arr.forEach(function (item) {
             if (item.hasOwnProperty("append")) {
@@ -43,10 +26,13 @@
 
 
     var StartScreenWidget = function () {
-
-        let BASE_URL = "http://localhost:8080";// Local onde está hospedado minha instancia do blip
-        let STYLE_URL = "style-bot.css";// Local onde está hospedado meu css do blip chat
-        let START_SCREEN_URL = "form.html";// Local onde está meu html padrão, aqui já tem o css do start-screen
+        console.log('Iniciando bot...')
+        let BASE_URL = "https://chat.blip.ai/";
+        // let BASE_URL = "http://localhost:8080";// Local onde está hospedado minha instancia do blip
+        // let STYLE_URL = "style-bot.css";// Local onde está hospedado meu css do blip chat
+        let STYLE_URL = "https://williamyizima.github.io/style.css";// Local onde está hospedado meu css do blip chat
+        // let START_SCREEN_URL = "form.html";// Local onde está meu html padrão, aqui já tem o css do start-screen
+        let START_SCREEN_URL = "https://williamyizima.github.io/form"
         let APP_KEY = "cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz";
         let BOTTOM_IMAGE_URL = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";// Meu logo inicial
         let TOP_IMAGE_URL = "chat01.svg";// Meu logo final
@@ -604,14 +590,9 @@
         };
 
     }
-</script>
-<script>
+
     document.addEventListener("DOMContentLoaded", function () {
         startScreen = new StartScreenWidget();
         startScreen.load();
+        console.log('bot inicializado')
     });
-</script> -->
-
-
-
-</html>

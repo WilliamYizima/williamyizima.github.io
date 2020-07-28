@@ -30,12 +30,13 @@
         let BASE_URL = "https://chat.blip.ai/";
         // let BASE_URL = "http://localhost:8080";// Local onde está hospedado minha instancia do blip
         // let STYLE_URL = "style-bot.css";// Local onde está hospedado meu css do blip chat
-        let STYLE_URL = "https://williamyizima.github.io/style.css";// Local onde está hospedado meu css do blip chat
+        let STYLE_URL = "https://williamyizima.github.io/style-bot.css";// Local onde está hospedado meu css do blip chat
         // let START_SCREEN_URL = "form.html";// Local onde está meu html padrão, aqui já tem o css do start-screen
         let START_SCREEN_URL = "https://williamyizima.github.io/form"
         let APP_KEY = "cGF1bDI6NTI0ODc0ZTMtZDkxNS00NzZlLWFmZGEtNGI2Y2RhZmU4MzAz";
         let BOTTOM_IMAGE_URL = "https://s3-sa-east-1.amazonaws.com/infobots/fiat/customer-care/icon-white-vector.svg";// Meu logo inicial
-        let TOP_IMAGE_URL = "chat01.svg";// Meu logo final
+        // let TOP_IMAGE_URL = "chat01.svg";// Meu logo final
+        let TOP_IMAGE_URL = "https://williamyizima.github.io/chat01.svg";// Meu logo final
         let STARTING_COLOR = "#ffffff";// Cor inicial da bolinha
 
         //inicio insere o css do blip 

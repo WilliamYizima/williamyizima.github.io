@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-gray-vector</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="animation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="normal" transform="translate(-252.000000, -104.000000)" fill="#7A7E86" fill-rule="nonzero">
+            <g id="Group-2">
+                <g id="Group" transform="translate(92.000000, 104.000000)">
+                    <g id="Group-3" transform="translate(160.000000, 0.000000)">
+                        <path d="M38,16 L38,34.7573593 C38,36.4142136 36.6568542,37.7573593 35,37.7573593 C34.2043505,37.7573593 33.4412888,37.4412888 32.8786797,36.8786797 L29,33 L13,33 C11.3431458,33 10,31.6568542 10,30 L10,16 C10,14.3431458 11.3431458,13 13,13 L35,13 C36.6568542,13 38,14.3431458 38,16 Z M36,34.7573593 L36,16 C36,15.4477153 35.5522847,15 35,15 L13,15 C12.4477153,15 12,15.4477153 12,16 L12,30 C12,30.5522847 12.4477153,31 13,31 L29.8284271,31 L34.2928932,35.4644661 C34.4804296,35.6520025 34.7347835,35.7573593 35,35.7573593 C35.5522847,35.7573593 36,35.3096441 36,34.7573593 Z M15,19 L32,19 L32,21 L15,21 L15,19 Z M15,25 L32,25 L32,27 L15,27 L15,25 Z" id="ballon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

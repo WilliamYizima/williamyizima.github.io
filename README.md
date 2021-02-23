@@ -1,65 +1,62 @@
-<img src="assets/theme_logo.svg" class="detail_header">
+# Kasper
 
-# jekyll-shell-theme
+This is a port of Ghost's default theme [Casper v1](https://github.com/tryghost/casper) for Jekyll. Here is a live [demo](https://rosario.io/kasper). 
 
-**Jekyll Shell Theme** is a light-weight customizable one-column jekyll theme that gives off:
-
-- Hackery Vibes
-- Shell Nostalgia
-- Code, code and more code
-
-See an example of this theme in action on the [theme's official site](https://tareqdandachi.github.io/jekyll-shell-theme).
+Feel free to fork, change, modify and re-use it.
 
 ## Installation
 
-### Gem-based method
+    git clone https://github.com/rosario/kasper.git
+    cd kasper
+    gem install jekyll
+    gem install jekyll-paginate
+    
+## Change _config.yml
 
-Add this line to your Jekyll site's `Gemfile`:
+Change the following settings in _config.yaml. Most likely you want the `baseurl: ""`
 
-```ruby
-gem "jekyll-shell-theme"
+```
+baseurl: ""
+domain_name: "yourblog-domain.com"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+## How to use it
 
-```yaml
-theme: jekyll-shell-theme
-```
+Build page and start local web server
 
-And then execute:
+    jekyll serve
 
-    $ bundle
+Build page into `_site` folder
 
-Or install it yourself as:
+    jekyll build
 
-    $ gem install jekyll-shell-theme
+## Kasper theme includes
 
-### Remote theme method
+* Pagination
+* Rss
+* Google Analytics Tracking code
+* Code Syntax Highlight
+* Author's profile with picture
+* Disqus comments
 
-Make sure your `Gemfile` contains the `github-pages` gem and **not** the `jekyll-shell-theme` gem.
+## Screenshots
 
-Then add `remote_theme: "tareqdandachi/jekyll-shell-theme"` to your `_config.yml` file.
-*Remove* any other `theme:` or `remote_theme:` entry.
+![index page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-index.png)
+![post page](https://raw.github.com/rosario/kasper/master/assets/images/kasper-theme-post.png)
 
-*For an example of what a config file could look like, look at [example-config.yml](https://github.com/tareqdandachi/jekyll-shell-theme/blob/master/example-config.yml)*
 
-## Usage
+## Thanks
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+Most of the work has been already done by the Ghost team, I've just ported Casper to Jekyll. 
+I've also added few things specific to Jekyll and some minor style changes.
 
-## Contributing
+## Copyright & License
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tareqdandachi/jekyll-shell-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Copyright (C) 2013 Ghost Foundation - Released under the MIT License.
 
-## Development
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Everyone is welcome to fork this repo and modify the code. To set up your environment to develop this theme, run `bundle install`.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-To test the theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using the theme. Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-shell-theme.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

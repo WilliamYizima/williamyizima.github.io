@@ -1,24 +1,19 @@
-title: "jekyll-shell-theme"
-tagline: "A jekyll theme that looks like a shell/terminal"
-description: "This is a preview of jekyll-shell-theme."
-github_username: tareqdandachi
-baseurl: "/jekyll-shell-theme"
-url: "https://tareqdandachi.github.io"
+name: Your New Jekyll Site
+description: Blogging about stuffs
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
 
-plugins:
-  - jemoji
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-sass:
-  style: compressed
-
+markdown: kramdown
 highlighter: rouge
+logo: false
+paginate: 15
+baseurl: /kasper
+domain_name: "http://yourblog-domain.com"
+google_analytics: "UA-XXXXXXXX-X"
+plugins: [jekyll-paginate]
 
-header_pages:
-  - index.md
-  - read-me.md
-  - preview.md
+# Details for the RSS feed generator
+url: ""
+author: "Your Name"
 
-# set the size of the text to 'large' or 'small', default is small
-font-size: small
+# Disqus config
+disqus-shortname: ""

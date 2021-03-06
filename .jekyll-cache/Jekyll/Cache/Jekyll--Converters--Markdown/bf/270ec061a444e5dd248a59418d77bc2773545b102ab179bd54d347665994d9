@@ -1,4 +1,4 @@
-I"'<p>Notepad is a Jekyll theme which is very simple, clean and beautiful. This theme is good for any blog.</p>
+I"Ž<p>Notepad is a Jekyll theme which is very simple, clean and beautiful. This theme is good for any blog.</p>
 
 <p>Main Features:
 Zurb Foundation 5 - css framework
@@ -8,8 +8,8 @@ Font Awesome
 Disqus comments integration
 You can set post image covers by using only Ghost narkdown editor just place something like this:</p>
 
-<pre><code>![cover-image](http://path-to-your-image.jpg)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![cover-image](http://path-to-your-image.jpg)
+</code></pre></div></div>
 
 <p>You can also place other images witch will be put in text.</p>
 

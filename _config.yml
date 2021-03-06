@@ -1,6 +1,6 @@
-title:            Notepad
-description:      "KAIZEN"
-logo:             logo.png
+title:            KAIZEN
+description:      "Hoje é um lindo dia para fazer acontecer ..."
+logo:             donation.png
 disqus_shortname: hmfaysal
 share:            true
 dropcap:			true
@@ -18,9 +18,9 @@ owner:
   description:    I can't accept not trying 👹
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       https://www.facebook.com/william.yizima
-  github:         https://github.com/WilliamYizima      
-  instagram:      https://www.instagram.com/will_yizima/
+  facebook:       william.yizima
+  github:         WilliamYizima      
+  instagram:      will_yizima
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 

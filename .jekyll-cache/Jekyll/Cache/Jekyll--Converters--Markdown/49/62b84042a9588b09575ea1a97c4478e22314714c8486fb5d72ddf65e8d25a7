@@ -1,4 +1,4 @@
-I"]<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
+I"�<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
 
 <h1 id="heading-1">Heading 1</h1>
 
@@ -98,7 +98,7 @@
 
 <h2 id="buttons">Buttons</h2>
 
-<p>Make any link standout more when applying the <code>button</code> class.</p>
+<p>Make any link standout more when applying the <code class="language-plaintext highlighter-rouge">button</code> class.</p>
 
 <p><a href="#" class="button">Default Button</a></p>
 :ET

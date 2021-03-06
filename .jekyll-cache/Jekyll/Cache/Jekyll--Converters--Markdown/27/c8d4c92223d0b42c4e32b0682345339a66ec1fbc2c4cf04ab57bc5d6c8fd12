@@ -1,4 +1,4 @@
-I"�]<p>General notes and suggestions for customizing <strong>HMFAYSAL Notepad Theme</strong>.</p>
+I"�f<p>General notes and suggestions for customizing <strong>HMFAYSAL Notepad Theme</strong>.</p>
 
 <section id="table-of-contents" class="toc">
   <header>
@@ -46,8 +46,8 @@
   <li><a href="http://jekyllrb.com">Install Jekyll</a> and read through <a href="/theme-setup/installing-jekyll-on-windows/">this installation instructions</a> if you haven’t already.</li>
   <li>Fork the <a href="https://github.com/hmfaysal/hmfaysal-omega-theme/fork">HMFAYSAL Notepad Theme repo</a></li>
   <li>Clone the repo you just forked.</li>
-  <li>Edit <code>_config.yml</code> to personalize your site.</li>
-  <li>Check out the sample posts in <code>_posts</code> to see examples, assigning categories and tags, and other YAML data.</li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">_config.yml</code> to personalize your site.</li>
+  <li>Check out the sample posts in <code class="language-plaintext highlighter-rouge">_posts</code> to see examples, assigning categories and tags, and other YAML data.</li>
   <li>Read the documentation below for further customization pointers and documentation.
 <br />
 <br /></li>
@@ -56,16 +56,16 @@
 <div class="span7 text-center"><a href="https://github.com/hmfaysal/hmfaysal-omega-theme/archive/master.zip" class="btn btn-success btn-large"><i class="icon-download-alt"></i> Download the Theme</a></div>
 <p><br /></p>
 
-<p class="notice"><strong>Pro-tip:</strong> Delete the <code>gh-pages</code> branch after cloning and start fresh by branching off <code>master</code>. There is a bunch of garbage in <code>gh-pages</code> used for the theme’s demo site that I’m guessing you don’t want on your site.</p>
+<p class="notice"><strong>Pro-tip:</strong> Delete the <code class="language-plaintext highlighter-rouge">gh-pages</code> branch after cloning and start fresh by branching off <code class="language-plaintext highlighter-rouge">master</code>. There is a bunch of garbage in <code class="language-plaintext highlighter-rouge">gh-pages</code> used for the theme’s demo site that I’m guessing you don’t want on your site.</p>
 
 <hr />
 
 <h2 id="setup-for-an-existing-jekyll-site">Setup for an Existing Jekyll site</h2>
 
 <ol>
-  <li>Clone the following folders: <code>_includes</code>, <code>_layouts</code>, <code>assets</code>, and <code>images</code>.</li>
-  <li>Clone the following files and personalize content as need: <code>about.md</code>, <code>articles.html</code>, <code>index.html</code>, <code>tags.html</code>, <code>feed.xml</code>, and <code>sitemap.xml</code>.</li>
-  <li>Set the following variables in your <code>config.yml</code> file:</li>
+  <li>Clone the following folders: <code class="language-plaintext highlighter-rouge">_includes</code>, <code class="language-plaintext highlighter-rouge">_layouts</code>, <code class="language-plaintext highlighter-rouge">assets</code>, and <code class="language-plaintext highlighter-rouge">images</code>.</li>
+  <li>Clone the following files and personalize content as need: <code class="language-plaintext highlighter-rouge">about.md</code>, <code class="language-plaintext highlighter-rouge">articles.html</code>, <code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">tags.html</code>, <code class="language-plaintext highlighter-rouge">feed.xml</code>, and <code class="language-plaintext highlighter-rouge">sitemap.xml</code>.</li>
+  <li>Set the following variables in your <code class="language-plaintext highlighter-rouge">config.yml</code> file:</li>
 </ol>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">title</span><span class="pi">:</span>            <span class="s">Site Title</span>
@@ -224,16 +224,16 @@
 
 <h3 id="_configyml">_config.yml</h3>
 
-<p>Most of the variables found here are used in the .html files found in <code>_includes</code> if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. Links are absolute and prefixed with <code>{{ site.url }}</code> in the various <code>_includes</code> and <code>_layouts</code>, so remember to properly set <code>url</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and use <code>http://localhost:4000</code> when developing locally or else the theme’s stylesheet and scripts won’t load.</p>
+<p>Most of the variables found here are used in the .html files found in <code class="language-plaintext highlighter-rouge">_includes</code> if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. Links are absolute and prefixed with <code class="language-plaintext highlighter-rouge">{{ site.url }}</code> in the various <code class="language-plaintext highlighter-rouge">_includes</code> and <code class="language-plaintext highlighter-rouge">_layouts</code>, so remember to properly set <code class="language-plaintext highlighter-rouge">url</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and use <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> when developing locally or else the theme’s stylesheet and scripts won’t load.</p>
 <h4 id="disqus-comments">Disqus Comments</h4>
 
-<p>Create a <a href="http://disqus.com">Disqus</a> account and change <code>disqus_shortname</code> in <code>_config.yml</code> to the Disqus <em>shortname</em> you just setup. To enable commenting on a post, add the following to its front matter:</p>
+<p>Create a <a href="http://disqus.com">Disqus</a> account and change <code class="language-plaintext highlighter-rouge">disqus_shortname</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code> to the Disqus <em>shortname</em> you just setup. To enable commenting on a post, add the following to its front matter:</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">comments</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
 
 <h4 id="ownerauthor-information">Owner/Author Information</h4>
 
-<p>Change your name, and avatar photo (200x200 pixels or larger), email, and social networking urls. If you want to link to an external image on Gravatar or something similiar you’ll need to edit the path in <code>head.html</code> since it assumes it is located in <code>/images</code>.</p>
+<p>Change your name, and avatar photo (200x200 pixels or larger), email, and social networking urls. If you want to link to an external image on Gravatar or something similiar you’ll need to edit the path in <code class="language-plaintext highlighter-rouge">head.html</code> since it assumes it is located in <code class="language-plaintext highlighter-rouge">/images</code>.</p>
 
 <p>Including a link to your Google+ profile has the added benefit of displaying <a href="https://plus.google.com/authorship">Google Authorship</a> in Google search results if you’ve went ahead and applied for it.</p>
 
@@ -243,7 +243,7 @@
 
 <h4 id="top-navigation-links">Top Navigation Links</h4>
 
-<p>Edit page/post titles and URLs to include in the site’s navigation. For external links add <code>external: true</code>.</p>
+<p>Edit page/post titles and URLs to include in the site’s navigation. For external links add <code class="language-plaintext highlighter-rouge">external: true</code>.</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># sample top navigation links</span>
 <span class="na">links</span><span class="pi">:</span>
@@ -266,11 +266,11 @@
 
 <h3 id="_includes">_includes</h3>
 
-<p>For the most part you can leave these as is since the author/owner details are pulled from <code>_config.yml</code>. That said you’ll probably want to customize the copyright stuff in <code>footer.html</code> to your liking.</p>
+<p>For the most part you can leave these as is since the author/owner details are pulled from <code class="language-plaintext highlighter-rouge">_config.yml</code>. That said you’ll probably want to customize the copyright stuff in <code class="language-plaintext highlighter-rouge">footer.html</code> to your liking.</p>
 
 <h3 id="adding-posts-and-pages">Adding Posts and Pages</h3>
 
-<p>There are two main content layouts: <code>post.html</code> (for posts) and <code>page.html</code> (for pages). Both have support for large <strong>feature images</strong> that span the full-width of the screen, and both are meant for text heavy blog posts (or articles).</p>
+<p>There are two main content layouts: <code class="language-plaintext highlighter-rouge">post.html</code> (for posts) and <code class="language-plaintext highlighter-rouge">page.html</code> (for pages). Both have support for large <strong>feature images</strong> that span the full-width of the screen, and both are meant for text heavy blog posts (or articles).</p>
 
 <h4 id="feature-images">Feature Images</h4>
 
@@ -284,15 +284,15 @@
 
 <h4 id="categories">Categories</h4>
 
-<p>In the sample <code>_posts</code> folder you may have noticed <code>category: articles</code> in the front matter. I like keeping all posts grouped in the same folder. If you decide to rename or add categories you will need to modify the permalink in <code>articles.md</code> along with the filename (if renaming).</p>
+<p>In the sample <code class="language-plaintext highlighter-rouge">_posts</code> folder you may have noticed <code class="language-plaintext highlighter-rouge">category: articles</code> in the front matter. I like keeping all posts grouped in the same folder. If you decide to rename or add categories you will need to modify the permalink in <code class="language-plaintext highlighter-rouge">articles.md</code> along with the filename (if renaming).</p>
 
-<p>For example. Say you want to group all your posts under <code>blog/</code> instead of <code>articles/</code>. In your post add <code>category: blog</code> to the front matter, rename or duplicate <code>articles.md</code> to <code>blog.md</code> and change the permalink in that file to <code>permalink: /blog/index.html</code>.</p>
+<p>For example. Say you want to group all your posts under <code class="language-plaintext highlighter-rouge">blog/</code> instead of <code class="language-plaintext highlighter-rouge">articles/</code>. In your post add <code class="language-plaintext highlighter-rouge">category: blog</code> to the front matter, rename or duplicate <code class="language-plaintext highlighter-rouge">articles.md</code> to <code class="language-plaintext highlighter-rouge">blog.md</code> and change the permalink in that file to <code class="language-plaintext highlighter-rouge">permalink: /blog/index.html</code>.</p>
 
-<p>If done correctly <code>/blog</code> should be a page listing all the site’s posts.</p>
+<p>If done correctly <code class="language-plaintext highlighter-rouge">/blog</code> should be a page listing all the site’s posts.</p>
 
 <h4 id="postpage-thumbnails-for-og-and-twitter-cards">Post/Page Thumbnails for OG and Twitter Cards</h4>
 
-<p>Post and page thumbnails work the same way. These are used by <a href="https://developers.facebook.com/docs/opengraph/">Open Graph</a> and <a href="https://dev.twitter.com/docs/cards">Twitter Cards</a> meta tags found in <code>head.html</code>. If you don’t assign a thumbnail the image you assigned to <code>site.owner.avatar</code> in `_config.yml will be used.</p>
+<p>Post and page thumbnails work the same way. These are used by <a href="https://developers.facebook.com/docs/opengraph/">Open Graph</a> and <a href="https://dev.twitter.com/docs/cards">Twitter Cards</a> meta tags found in <code class="language-plaintext highlighter-rouge">head.html</code>. If you don’t assign a thumbnail the image you assigned to <code class="language-plaintext highlighter-rouge">site.owner.avatar</code> in `_config.yml will be used.</p>
 
 <p>Here’s an example of what a tweet to your site could look like if you activate Twitter Cards and include all the metas in your post’s YAML.</p>
 
@@ -306,11 +306,11 @@
 
 <h4 id="twitter-cards">Twitter Cards</h4>
 
-<p>Twitter cards make it possible to attach images and post summaries to Tweets that link to your content. Summary Card meta tags have been added to <code>head.html</code> to support this, you just need to <a href="https://dev.twitter.com/docs/cards">validate and apply your domain</a> to turn it on.</p>
+<p>Twitter cards make it possible to attach images and post summaries to Tweets that link to your content. Summary Card meta tags have been added to <code class="language-plaintext highlighter-rouge">head.html</code> to support this, you just need to <a href="https://dev.twitter.com/docs/cards">validate and apply your domain</a> to turn it on.</p>
 
 <h4 id="error-404-page">Error 404 page</h4>
 
-<p>If you’re hosting your site with Github Pages, simply dropping the 404.html in the root folder will redirect all bad requests to this page. But if you’re hosting with some other provider, simply make a <code>.htaccess</code> file with the following code in it and drop it in the root folder.</p>
+<p>If you’re hosting your site with Github Pages, simply dropping the 404.html in the root folder will redirect all bad requests to this page. But if you’re hosting with some other provider, simply make a <code class="language-plaintext highlighter-rouge">.htaccess</code> file with the following code in it and drop it in the root folder.</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ErrorDocument 404 /404.html</span></code></pre></figure>
 
@@ -337,7 +337,7 @@
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
-      <p>Used to generate absolute urls in <code>sitemap.xml</code>, <code>feed.xml</code>, and for canonical urls in <code>head.html</code>. Don’t include a trailing <code>/</code> in your base url ie: http://hmfaysal.github.io. When developing locally I suggest using <code>http://localhost:4000</code> or whatever server you’re using to properly load the theme’s stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Used to generate absolute urls in <code class="language-plaintext highlighter-rouge">sitemap.xml</code>, <code class="language-plaintext highlighter-rouge">feed.xml</code>, and for canonical urls in <code class="language-plaintext highlighter-rouge">head.html</code>. Don’t include a trailing <code class="language-plaintext highlighter-rouge">/</code> in your base url ie: http://hmfaysal.github.io. When developing locally I suggest using <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> or whatever server you’re using to properly load the theme’s stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

@@ -7,7 +7,7 @@ imagefeature: fourseasons.jpg
 chart: true
 ---
 <figure>
-  <img src="{{ site.url }}/images/will.png" alt="Hossain Mohammad Faysal">
+  <img src="{{ site.url }}/images/will.png" alt="Will">
   <figcaption>Buda e Will</figcaption>
 </figure>
 
@@ -30,22 +30,21 @@ chart: true
 E aí! Meu nome é **William J. Yizima**, e neste local haverá coisas incríveis para qualquer um aprender sobre NLP e outras magias. 
 
 
-Compartilhando o mesmo sentimento e pensamento do criador deste template:
+**Compartilhando o mesmo sentimento e pensamento** do criador deste template:
 
-I
-make
-stuff.
-
-
-*Beautiful, practical, meaningful stuff.*
-
-I make what I love.
-
-*I love what I do.*
-
-For
-the makers,  
-the creators,  
-the discoverers,  
-the original thinkers,  
-***This is the space to create.***
+> I make stuff. <br>
+> I make what I love.<br>
+> *I love what I do.*<br>
+> For <br>
+> the makers,  <br>
+> the creators,  <br>
+> the discoverers,  <br>
+> the original thinkers,  <br>
+> ***This is the space to create.***
+<br>
+<center> <h2>Espero que goste!</h2></center>
+<br>
+<figure>
+  <img src="{{ site.url }}/images/kaizen.png" alt="Hossain Mohammad Faysal">
+  <figcaption>Espero que alguma palavra neste blog, mude sua vida</figcaption>
+</figure>

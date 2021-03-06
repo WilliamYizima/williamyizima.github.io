@@ -1,0 +1,344 @@
+I"�]<p>General notes and suggestions for customizing <strong>HMFAYSAL Notepad Theme</strong>.</p>
+
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Contents</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#basic-setup-for-a-new-jekyll-site" id="markdown-toc-basic-setup-for-a-new-jekyll-site">Basic Setup for a new Jekyll site</a></li>
+  <li><a href="#setup-for-an-existing-jekyll-site" id="markdown-toc-setup-for-an-existing-jekyll-site">Setup for an Existing Jekyll site</a></li>
+  <li><a href="#post-front-matter-yaml" id="markdown-toc-post-front-matter-yaml">Post Front Matter YAML</a></li>
+  <li><a href="#folder-structure" id="markdown-toc-folder-structure">Folder Structure</a></li>
+  <li><a href="#customization" id="markdown-toc-customization">Customization</a>    <ul>
+      <li><a href="#_configyml" id="markdown-toc-_configyml">_config.yml</a>        <ul>
+          <li><a href="#disqus-comments" id="markdown-toc-disqus-comments">Disqus Comments</a></li>
+          <li><a href="#ownerauthor-information" id="markdown-toc-ownerauthor-information">Owner/Author Information</a></li>
+          <li><a href="#google-analytics-and-webmaster-tools" id="markdown-toc-google-analytics-and-webmaster-tools">Google Analytics and Webmaster Tools</a></li>
+          <li><a href="#top-navigation-links" id="markdown-toc-top-navigation-links">Top Navigation Links</a></li>
+          <li><a href="#other-stuff" id="markdown-toc-other-stuff">Other Stuff</a></li>
+        </ul>
+      </li>
+      <li><a href="#_includes" id="markdown-toc-_includes">_includes</a></li>
+      <li><a href="#adding-posts-and-pages" id="markdown-toc-adding-posts-and-pages">Adding Posts and Pages</a>        <ul>
+          <li><a href="#feature-images" id="markdown-toc-feature-images">Feature Images</a></li>
+          <li><a href="#categories" id="markdown-toc-categories">Categories</a></li>
+          <li><a href="#postpage-thumbnails-for-og-and-twitter-cards" id="markdown-toc-postpage-thumbnails-for-og-and-twitter-cards">Post/Page Thumbnails for OG and Twitter Cards</a></li>
+          <li><a href="#social-share-links" id="markdown-toc-social-share-links">Social Share Links</a></li>
+          <li><a href="#twitter-cards" id="markdown-toc-twitter-cards">Twitter Cards</a></li>
+          <li><a href="#error-404-page" id="markdown-toc-error-404-page">Error 404 page</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#questions" id="markdown-toc-questions">Questions?</a></li>
+  <li><a href="#requests" id="markdown-toc-requests">Requests?</a></li>
+  <li><a href="#license" id="markdown-toc-license">License</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<h2 id="basic-setup-for-a-new-jekyll-site">Basic Setup for a new Jekyll site</h2>
+
+<ol>
+  <li><a href="http://jekyllrb.com">Install Jekyll</a> and read through <a href="/theme-setup/installing-jekyll-on-windows/">this installation instructions</a> if you haven’t already.</li>
+  <li>Fork the <a href="https://github.com/hmfaysal/hmfaysal-omega-theme/fork">HMFAYSAL Notepad Theme repo</a></li>
+  <li>Clone the repo you just forked.</li>
+  <li>Edit <code>_config.yml</code> to personalize your site.</li>
+  <li>Check out the sample posts in <code>_posts</code> to see examples, assigning categories and tags, and other YAML data.</li>
+  <li>Read the documentation below for further customization pointers and documentation.
+<br />
+<br /></li>
+</ol>
+
+<div class="span7 text-center"><a href="https://github.com/hmfaysal/hmfaysal-omega-theme/archive/master.zip" class="btn btn-success btn-large"><i class="icon-download-alt"></i> Download the Theme</a></div>
+<p><br /></p>
+
+<p class="notice"><strong>Pro-tip:</strong> Delete the <code>gh-pages</code> branch after cloning and start fresh by branching off <code>master</code>. There is a bunch of garbage in <code>gh-pages</code> used for the theme’s demo site that I’m guessing you don’t want on your site.</p>
+
+<hr />
+
+<h2 id="setup-for-an-existing-jekyll-site">Setup for an Existing Jekyll site</h2>
+
+<ol>
+  <li>Clone the following folders: <code>_includes</code>, <code>_layouts</code>, <code>assets</code>, and <code>images</code>.</li>
+  <li>Clone the following files and personalize content as need: <code>about.md</code>, <code>articles.html</code>, <code>index.html</code>, <code>tags.html</code>, <code>feed.xml</code>, and <code>sitemap.xml</code>.</li>
+  <li>Set the following variables in your <code>config.yml</code> file:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">title</span><span class="pi">:</span>            <span class="s">Site Title</span>
+<span class="na">description</span><span class="pi">:</span>      <span class="s">Site description for the metas.</span>
+<span class="na">logo</span><span class="pi">:</span>             <span class="s">site-logo.png</span>
+<span class="na">disqus_shortname</span><span class="pi">:</span> <span class="s">shortname</span>
+<span class="c1"># Assign a default image for your site's header and footer</span>
+<span class="na">default_bg</span><span class="pi">:</span>       <span class="s">some-image.jpg</span>
+<span class="na">search</span><span class="pi">:</span>           <span class="no">true</span>
+<span class="na">share</span><span class="pi">:</span>            <span class="no">true</span>
+<span class="c1"># Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.</span>
+<span class="na">readtime</span><span class="pi">:</span>         <span class="no">true</span>
+<span class="c1"># Turn on or off the fin animations in the header and footer</span>
+<span class="na">animated_fins</span><span class="pi">:</span>    <span class="no">true</span>
+<span class="c1"># Specify the fin color in RGB value</span>
+<span class="na">fin_color</span><span class="pi">:</span>        <span class="s2">"</span><span class="s">255,255,255"</span>
+<span class="c1"># Change url to your domain. Leave localhost server or blank when working locally.</span>
+<span class="na">url</span><span class="pi">:</span>              <span class="s2">"</span><span class="s">http://localhost:4000"</span>
+
+
+<span class="c1"># Owner/author information</span>
+<span class="na">owner</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span>           <span class="s">Your Name</span>
+  <span class="na">avatar</span><span class="pi">:</span>         <span class="s">your-photo.jpg</span>
+  <span class="na">email</span><span class="pi">:</span>          <span class="s">your@email.com</span>
+  <span class="c1"># Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&amp;action=encode&amp;charset=us_ascii to encode your description into XML string</span>
+  <span class="na">description</span><span class="pi">:</span>    <span class="s">Some Details about yourself</span>
+  <span class="c1"># Social networking links used in footer. Update and remove as you like.</span>
+  <span class="c1"># To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk</span>
+  <span class="na">twitter</span><span class="pi">:</span>
+  <span class="na">facebook</span><span class="pi">:</span>
+  <span class="na">github</span><span class="pi">:</span>
+  <span class="na">linkedin</span><span class="pi">:</span>
+  <span class="na">instagram</span><span class="pi">:</span>
+  <span class="na">tumblr</span><span class="pi">:</span>
+  <span class="na">hmfaysalsocial</span><span class="pi">:</span>
+  <span class="c1"># For Google Authorship https://plus.google.com/authorship</span>
+  <span class="na">google_plus</span><span class="pi">:</span>    <span class="s2">"</span><span class="s">http://plus.google.com/123123123123132123"</span>
+
+<span class="c1"># Analytics and webmaster tools stuff goes here</span>
+<span class="na">google_analytics</span><span class="pi">:</span>
+<span class="na">google_verify</span><span class="pi">:</span>
+<span class="c1"># https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here</span>
+<span class="na">bing_verify</span><span class="pi">:</span>
+
+<span class="c1"># Links to include in top navigation</span>
+<span class="c1"># For external links add external: true</span>
+<span class="na">links</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Home</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">home</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">&lt;i class="icon-book"&gt;&lt;/i&gt; Documentation</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/documentation</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Categories</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/categories</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Tags</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/tags</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Faysal who?</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/hossain-mohd-faysal</span>
+
+<span class="c1"># http://en.wikipedia.org/wiki/List_of_tz_database_time_zones</span>
+<span class="na">timezone</span><span class="pi">:</span>    <span class="s">America/New_York</span>
+<span class="na">future</span><span class="pi">:</span>      <span class="no">true</span>
+<span class="na">pygments</span><span class="pi">:</span>    <span class="no">true</span>
+<span class="na">markdown</span><span class="pi">:</span>    <span class="s">kramdown</span>
+<span class="na">paginate</span><span class="pi">:</span>    <span class="m">6</span>
+<span class="na">paginate_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">page:num"</span>
+
+<span class="c1"># https://github.com/mojombo/jekyll/wiki/Permalinks</span>
+<span class="na">permalink</span><span class="pi">:</span>   <span class="s">/:categories/:title</span>
+
+<span class="na">kramdown</span><span class="pi">:</span>
+  <span class="na">auto_ids</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">footnote_nr</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">entity_output</span><span class="pi">:</span> <span class="s">as_char</span>
+  <span class="na">toc_levels</span><span class="pi">:</span> <span class="s">1..6</span>
+  <span class="na">use_coderay</span><span class="pi">:</span> <span class="no">false</span>
+
+  <span class="na">coderay</span><span class="pi">:</span>
+    <span class="na">coderay_line_numbers</span><span class="pi">:</span> 
+    <span class="na">coderay_line_numbers_start</span><span class="pi">:</span> <span class="m">1</span>
+    <span class="na">coderay_tab_width</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="na">coderay_bold_every</span><span class="pi">:</span> <span class="m">10</span>
+    <span class="na">coderay_css</span><span class="pi">:</span> <span class="s">class</span></code></pre></figure>
+
+<hr />
+
+<h2 id="post-front-matter-yaml">Post Front Matter YAML</h2>
+
+<p>A new blog post should have the following structure to utilise the themes functions</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Some</span><span class="nv"> </span><span class="s">Title"</span><span class="err">					</span><span class="c1"># Title of the post</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Some description</span><span class="err">		</span><span class="s"># Description of the post, used for Facebook Opengraph &amp; Twitter</span>
+<span class="na">headline</span><span class="pi">:</span> <span class="s">Some headline</span><span class="err">				</span><span class="s"># Will appear in bold letters on top of the post</span>
+<span class="na">modified</span><span class="pi">:</span> <span class="s">YYYY-MM-DD</span><span class="err">				</span><span class="s"># Date</span>
+<span class="na">category</span><span class="pi">:</span> <span class="s">personal</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">image</span><span class="pi">:</span> 
+  <span class="na">feature</span><span class="pi">:</span> <span class="s">some-image.jpg</span>
+<span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">mathjax</span><span class="pi">:</span>
+<span class="nn">---</span></code></pre></figure>
+
+<hr />
+
+<h2 id="folder-structure">Folder Structure</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Notepad
+|
+|   404.md
+|   categories.html
+|   favicon.ico
+|   favicon.png
+|   featured.html
+|   feed.xml
+|   hossain-mohd-faysal.md
+|   index.html
+|   LICENSE
+|   links.jsonp
+|   rakefile
+|   README.md
+|   search.json
+|   sitemap.xml
+|   tags.html
+|   _config.yml
+|
++---assets
+|   +---css
+|   |
+|   <span class="se">\-</span><span class="nt">--js</span>
+|
++---images
+|
++---_includes
+|       browser-upgrade.html
+|       disqus_comments.html
+|       footer.html
+|       head.html
+|       scripts.html
+|       share.html
+|       signoff.html
+|
++---_layouts
+|       home.html
+|       page.html
+|       post.html
+|
+<span class="se">\-</span><span class="nt">--_posts</span></code></pre></figure>
+
+<hr />
+
+<h2 id="customization">Customization</h2>
+
+<h3 id="_configyml">_config.yml</h3>
+
+<p>Most of the variables found here are used in the .html files found in <code>_includes</code> if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. Links are absolute and prefixed with <code>{{ site.url }}</code> in the various <code>_includes</code> and <code>_layouts</code>, so remember to properly set <code>url</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and use <code>http://localhost:4000</code> when developing locally or else the theme’s stylesheet and scripts won’t load.</p>
+<h4 id="disqus-comments">Disqus Comments</h4>
+
+<p>Create a <a href="http://disqus.com">Disqus</a> account and change <code>disqus_shortname</code> in <code>_config.yml</code> to the Disqus <em>shortname</em> you just setup. To enable commenting on a post, add the following to its front matter:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">comments</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
+
+<h4 id="ownerauthor-information">Owner/Author Information</h4>
+
+<p>Change your name, and avatar photo (200x200 pixels or larger), email, and social networking urls. If you want to link to an external image on Gravatar or something similiar you’ll need to edit the path in <code>head.html</code> since it assumes it is located in <code>/images</code>.</p>
+
+<p>Including a link to your Google+ profile has the added benefit of displaying <a href="https://plus.google.com/authorship">Google Authorship</a> in Google search results if you’ve went ahead and applied for it.</p>
+
+<h4 id="google-analytics-and-webmaster-tools">Google Analytics and Webmaster Tools</h4>
+
+<p>Your Google Analytics ID goes here along with meta tags for <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=35179">Google Webmaster Tools</a> and <a href="https://ssl.bing.com/webmaster/configure/verify/ownershi">Bing Webmaster Tools</a> site verification.</p>
+
+<h4 id="top-navigation-links">Top Navigation Links</h4>
+
+<p>Edit page/post titles and URLs to include in the site’s navigation. For external links add <code>external: true</code>.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># sample top navigation links</span>
+<span class="na">links</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Home</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">home</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">&lt;i class="icon-book"&gt;&lt;/i&gt; Documentation</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/documentation</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Categories</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/categories</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Tags</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/tags</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Faysal who?</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/hossain-mohd-faysal</span></code></pre></figure>
+
+<h4 id="other-stuff">Other Stuff</h4>
+
+<p>The rest is just your average Jekyll config settings. Nothing too crazy here…</p>
+
+<h3 id="_includes">_includes</h3>
+
+<p>For the most part you can leave these as is since the author/owner details are pulled from <code>_config.yml</code>. That said you’ll probably want to customize the copyright stuff in <code>footer.html</code> to your liking.</p>
+
+<h3 id="adding-posts-and-pages">Adding Posts and Pages</h3>
+
+<p>There are two main content layouts: <code>post.html</code> (for posts) and <code>page.html</code> (for pages). Both have support for large <strong>feature images</strong> that span the full-width of the screen, and both are meant for text heavy blog posts (or articles).</p>
+
+<h4 id="feature-images">Feature Images</h4>
+
+<p>A good rule of thumb is to keep feature images nice and wide. An image cropped around around 1024 x 768 pixels will keep file size down with an acceptable resolution for most devices. If you want to serve these images responsively I’d suggest looking at <a href="https://github.com/scottjehl/picturefill">Picturefill</a> or <a href="http://adaptive-images.com/">Adaptive Images</a>.</p>
+
+<p>The two layouts make the assumption that the feature images live in the <em>images</em> folder. To add a feature image to a post or page just include the filename in the front matter like so.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">image</span><span class="pi">:</span>
+  <span class="na">feature</span><span class="pi">:</span> <span class="s">feature-image-filename.jpg</span>
+  <span class="na">thumb</span><span class="pi">:</span> <span class="s">thumbnail-image.jpg</span> <span class="c1">#keep it square 200x200 px is good</span></code></pre></figure>
+
+<h4 id="categories">Categories</h4>
+
+<p>In the sample <code>_posts</code> folder you may have noticed <code>category: articles</code> in the front matter. I like keeping all posts grouped in the same folder. If you decide to rename or add categories you will need to modify the permalink in <code>articles.md</code> along with the filename (if renaming).</p>
+
+<p>For example. Say you want to group all your posts under <code>blog/</code> instead of <code>articles/</code>. In your post add <code>category: blog</code> to the front matter, rename or duplicate <code>articles.md</code> to <code>blog.md</code> and change the permalink in that file to <code>permalink: /blog/index.html</code>.</p>
+
+<p>If done correctly <code>/blog</code> should be a page listing all the site’s posts.</p>
+
+<h4 id="postpage-thumbnails-for-og-and-twitter-cards">Post/Page Thumbnails for OG and Twitter Cards</h4>
+
+<p>Post and page thumbnails work the same way. These are used by <a href="https://developers.facebook.com/docs/opengraph/">Open Graph</a> and <a href="https://dev.twitter.com/docs/cards">Twitter Cards</a> meta tags found in <code>head.html</code>. If you don’t assign a thumbnail the image you assigned to <code>site.owner.avatar</code> in `_config.yml will be used.</p>
+
+<p>Here’s an example of what a tweet to your site could look like if you activate Twitter Cards and include all the metas in your post’s YAML.</p>
+
+<p><img src="/images/twitter-card-summary-large-image.jpg" alt="search screenshot" /></p>
+
+<h4 id="social-share-links">Social Share Links</h4>
+
+<p>To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">share</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
+
+<h4 id="twitter-cards">Twitter Cards</h4>
+
+<p>Twitter cards make it possible to attach images and post summaries to Tweets that link to your content. Summary Card meta tags have been added to <code>head.html</code> to support this, you just need to <a href="https://dev.twitter.com/docs/cards">validate and apply your domain</a> to turn it on.</p>
+
+<h4 id="error-404-page">Error 404 page</h4>
+
+<p>If you’re hosting your site with Github Pages, simply dropping the 404.html in the root folder will redirect all bad requests to this page. But if you’re hosting with some other provider, simply make a <code>.htaccess</code> file with the following code in it and drop it in the root folder.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">ErrorDocument 404 /404.html</span></code></pre></figure>
+
+<hr />
+
+<h2 id="questions">Questions?</h2>
+
+<p>Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter <a href="http://twitter.com/hmfaysal">@hmfaysal</a> or <a href="https://github.com/hmfaysal/hmfaysal-omega-theme/issues/new">file a GitHub Issue</a>.</p>
+
+<hr />
+
+<h2 id="requests">Requests?</h2>
+
+<p>If you have some specific requests for this theme, or if you need help custom coding some elements, message me on Twitter <a href="http://twitter.com/hmfaysal">@hmfaysal</a> or email me at <a href="mailto:hmfaysal@alum.mit.edu">hmfaysal@alum.mit.edu</a></p>
+
+<hr />
+
+<h2 id="license">License</h2>
+
+<p>This theme is free and open source software, distributed under the <a href="/license/">The MIT License</a>. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.</p>
+
+<p>If you’d like to give me credit somewhere on your blog or tweet a shout out to <a href="https://twitter.com/hmfaysal">@hmfaysal</a>, that would be pretty sweet.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Used to generate absolute urls in <code>sitemap.xml</code>, <code>feed.xml</code>, and for canonical urls in <code>head.html</code>. Don’t include a trailing <code>/</code> in your base url ie: http://hmfaysal.github.io. When developing locally I suggest using <code>http://localhost:4000</code> or whatever server you’re using to properly load the theme’s stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

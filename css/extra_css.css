@@ -2,6 +2,9 @@
     font-size: 20px;
 }
 
+.col-md-9 img{
+    max-width: 10%;
+}
 
 h2, .h2{
     font-size: 2rem !important;

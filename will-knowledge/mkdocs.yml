@@ -1,0 +1,16 @@
+site_name: will-docs
+theme:
+    name: cyborg
+    nav_style: dark
+
+nav:
+    - Home: index.md
+    - Exemplo01:
+        - Básico: 01-ia/index.md
+    - Sobre Will: xx-about/index.md
+
+extra_css:
+    - css/extra_css.css
+
+extra_js:
+    - css/extra_js.js

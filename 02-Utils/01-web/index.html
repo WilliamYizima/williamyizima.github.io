@@ -7,16 +7,16 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Básico - will-docs</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Web - will-docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
-        <link href="../css/extra_css.css" rel="stylesheet">
+        <link href="../../css/extra_css.css" rel="stylesheet">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="..">will-docs</a>
+                <a class="navbar-brand" href="../..">will-docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -35,28 +35,28 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Exemplo01 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Básico</a>
+    <a href="../../01-ia/" class="dropdown-item">Básico</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Utils <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../02-Utils/01-web/" class="dropdown-item">Web</a>
+    <a href="./" class="dropdown-item active">Web</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../xx-about/" class="nav-link">Sobre Mim</a>
+                                <a href="../../xx-about/" class="nav-link">Sobre Mim</a>
                             </li>
                         </ul>
 
@@ -67,17 +67,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../../01-ia/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../02-Utils/01-web/" class="nav-link">
+                                <a rel="next" href="../../xx-about/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/WilliamYizima/williamyizima.github.io/edit/master/docs/01-ia/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/WilliamYizima/williamyizima.github.io/edit/master/docs/02-Utils/01-web.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -97,8 +97,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#teste" class="nav-link">teste</a>
+            <li class="nav-item" data-level="1"><a href="#utils" class="nav-link">Utils</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ngrok" class="nav-link">Ngrok</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -106,7 +110,63 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="teste">teste</h2></div>
+<h1 id="utils">Utils</h1>
+<h2 id="ngrok">Ngrok</h2>
+<hr />
+<h3 id="para-que-serve">Para que serve</h3>
+<p>O Ngrok é uma ferramenta para temporariamente você expôr uma URL deixando exposta uma porta da sua máquina.</p>
+<p>Ex:</p>
+<ul>
+<li>Criei uma aplicação e estou rodando na porta 5000 (localhost:5000)</li>
+<li>Preciso fazer com que alguém consiga fazer um teste nessa aplicação, porém está em localhost(na minha máquina)</li>
+<li>Para isso utilizo o Ngrok que irá criar uma url(http e https) através da porta 5000 (fazendo o bind dessa porta).</li>
+<li>Dessa forma será possível qualquer pessoa com acesso à internet acessar minha porta 5000.</li>
+</ul>
+<h3 id="como-usar">Como usar</h3>
+<ol>
+<li>
+<p>Instale o ngrok:</p>
+</li>
+<li>
+<p>https://ngrok.com/</p>
+</li>
+<li>
+<p>se cadastre</p>
+</li>
+<li>
+<p>Dentro da pasta onde foi instalado o Ngrok,conecte o seu authtoken(utilizando o terminal):</p>
+</li>
+</ol>
+<pre><code class="language-bash">    ./ngrok authtoken SEUTOKEN
+</code></pre>
+<ol>
+<li>Após isso,suba sua aplicação (sendo que sua aplicação está rodando na porta 8080), e rode o seguinte comando dentro da pasta do ngrok:</li>
+</ol>
+<pre><code class="language-bash">    ./ngrok http 8080
+</code></pre>
+<ol>
+<li>Essa é a resposta provável(copie a url no navegador e estará disponível para utilizar em outros computadores/aplicação):</li>
+</ol>
+<p>```</p>
+<pre><code>ngrok by @inconshreveable                                       (Ctrl+C to quit)
+
+Session Status                online                                            
+Account                       Will (Plan: Free)                                 
+Version                       2.3.35                                            
+Region                        United States (us)                                
+Web Interface                 http://127.0.0.1:4040                             
+Forwarding                    http://6c0a862a9e8e.ngrok.io -&gt; http://localhost:5
+Forwarding                    https://6c0a862a9e8e.ngrok.io -&gt; http://localhost:
+
+Connections                   ttl     opn     rt1     rt5     p50     p90       
+                            2       0       0.01    0.01    0.12    0.24
+
+HTTP Requests                                                                   
+-------------
+
+GET /favicon.ico               404 NOT FOUND                                    
+GET /                          200 OK
+</code></pre></div>
             </div>
         </div>
 
@@ -115,11 +175,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

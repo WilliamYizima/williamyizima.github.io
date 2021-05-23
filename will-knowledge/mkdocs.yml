@@ -1,4 +1,7 @@
 site_name: will-docs
+
+repo_url: https://github.com/WilliamYizima/williamyizima.github.io
+
 theme:
     name: cyborg
     nav_style: dark

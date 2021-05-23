@@ -1,0 +1,20 @@
+* {
+    font-size: 20px;
+}
+
+
+h2, .h2{
+    font-size: 2rem !important;
+}
+
+h1, .h1{
+    font-size: 3rem !important;
+}
+
+h3, .h3{
+    font-size: 1.5rem !important;
+}
+
+body > div.container > div > div.col-md-9 > p:nth-child(5) > img {
+    margin-left: 50%;
+}

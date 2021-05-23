@@ -10,7 +10,9 @@ nav:
     - Home: index.md
     - Exemplo01:
         - Básico: 01-ia/index.md
-    - Sobre Will: xx-about/index.md
+    - Utils:
+        - Web: 02-Utils/01-web.md
+    - Sobre Mim: xx-about/index.md
 
 extra_css:
     - css/extra_css.css

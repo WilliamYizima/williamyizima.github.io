@@ -2,8 +2,11 @@
     font-size: 20px;
 }
 
-.col-md-9 img{
-    max-width: 10%;
+img[alt="tool-icon"], 
+img[alt="python-icon"], 
+img[alt="BLIP-icon"],
+img[alt="ml-icon"]{
+    max-width: 7%;
 }
 
 h2, .h2{
